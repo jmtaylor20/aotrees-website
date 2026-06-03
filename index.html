@@ -373,10 +373,8 @@
         <div class="form-card" id="estimate">
           <h2>Request a Free Estimate</h2>
           <p>Tell us what you need. We’ll follow up as soon as possible.</p>
-
-          <form name="estimate-request" method="POST" data-netlify="true">
-            <input type="hidden" name="form-name" value="estimate-request" />
-
+<form name="estimate-request" method="POST" data-netlify="true" action="/">
+  <input type="hidden" name="form-name" value="estimate-request" />
             <input type="text" name="name" placeholder="Name" required />
             <input type="tel" name="phone" placeholder="Phone" required />
             <input type="email" name="email" placeholder="Email" />
