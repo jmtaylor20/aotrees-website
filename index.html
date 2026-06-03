@@ -1,10 +1,504 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>A&O Tree Service</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A&O Tree Service | Notasulga, AL</title>
+  <meta name="description" content="A&O Tree Service specializes in dead and dangerous trees. Licensed and insured tree service serving Auburn, Opelika, Lake Martin, Notasulga, Tallassee, Montgomery, and East Central Alabama." />
+
+  <style>
+    :root {
+      --green: #063f24;
+      --green-2: #0d5c35;
+      --lime: #7fa321;
+      --dark: #101914;
+      --gray: #f4f6f3;
+      --white: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--dark);
+      background: var(--white);
+      line-height: 1.5;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255,255,255,.96);
+      border-bottom: 1px solid #e2e8df;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 0;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 900;
+      color: var(--green);
+      letter-spacing: -1px;
+    }
+
+    .nav-actions {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .phone {
+      font-weight: 800;
+      color: var(--green);
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--green);
+      color: var(--white);
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-weight: 800;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn.secondary {
+      background: var(--lime);
+      color: #10200f;
+    }
+
+    .hero {
+      background:
+        linear-gradient(90deg, rgba(6,63,36,.92), rgba(6,63,36,.68)),
+        url("assets/hero-tree-service.jpg");
+      background-size: cover;
+      background-position: center;
+      color: var(--white);
+      padding: 72px 0;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 42px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      color: #d8edac;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 14px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 6vw, 72px);
+      line-height: .95;
+      margin: 14px 0 18px;
+      letter-spacing: -2px;
+    }
+
+    .hero p {
+      font-size: 19px;
+      max-width: 620px;
+      margin-bottom: 24px;
+    }
+
+    .hero-bullets {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .pill {
+      background: rgba(255,255,255,.14);
+      border: 1px solid rgba(255,255,255,.25);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .form-card {
+      background: var(--white);
+      color: var(--dark);
+      padding: 28px;
+      border-radius: 22px;
+      box-shadow: 0 18px 45px rgba(0,0,0,.25);
+    }
+
+    .form-card h2 {
+      margin: 0 0 6px;
+      color: var(--green);
+      font-size: 28px;
+    }
+
+    .form-card p {
+      color: #4a554f;
+      font-size: 15px;
+      margin: 0 0 18px;
+    }
+
+    form {
+      display: grid;
+      gap: 12px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 13px 14px;
+      border: 1px solid #d7dfd4;
+      border-radius: 12px;
+      font-size: 15px;
+      font-family: inherit;
+    }
+
+    textarea { min-height: 110px; resize: vertical; }
+
+    section {
+      padding: 64px 0;
+    }
+
+    .section-title {
+      font-size: clamp(30px, 4vw, 46px);
+      margin: 0 0 12px;
+      color: var(--green);
+      letter-spacing: -1px;
+    }
+
+    .section-lead {
+      margin: 0 0 30px;
+      max-width: 760px;
+      color: #526058;
+      font-size: 18px;
+    }
+
+    .trust {
+      background: var(--gray);
+      padding: 34px 0;
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+    }
+
+    .trust-item {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 18px;
+      font-weight: 900;
+      color: var(--green);
+      text-align: center;
+      border: 1px solid #e2e8df;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .service-card {
+      background: var(--gray);
+      border-radius: 18px;
+      padding: 24px;
+      border: 1px solid #e2e8df;
+    }
+
+    .service-card h3 {
+      color: var(--green);
+      margin: 0 0 8px;
+      font-size: 22px;
+    }
+
+    .why {
+      background: var(--green);
+      color: var(--white);
+    }
+
+    .why .section-title { color: var(--white); }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .why-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .why-list div {
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 14px;
+      padding: 14px;
+      font-weight: 700;
+    }
+
+    .photo-box {
+      background: #0a2f1d;
+      border-radius: 22px;
+      min-height: 340px;
+      background-image: url("assets/truck-tree-service.jpg");
+      background-size: cover;
+      background-position: center;
+      border: 1px solid rgba(255,255,255,.2);
+    }
+
+    .areas {
+      background: var(--gray);
+    }
+
+    .area-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .area-list span {
+      background: var(--white);
+      border: 1px solid #dfe7dc;
+      color: var(--green);
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-weight: 800;
+    }
+
+    .final-cta {
+      text-align: center;
+    }
+
+    .final-cta h2 {
+      color: var(--green);
+      font-size: clamp(32px, 4vw, 48px);
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background: #071a10;
+      color: var(--white);
+      padding: 34px 0;
+      text-align: center;
+    }
+
+    footer strong {
+      color: #d8edac;
+    }
+
+    @media (max-width: 850px) {
+      .hero-grid, .why-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-grid, .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        align-items: flex-start;
+      }
+
+      .nav-actions {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 6px;
+      }
+
+      .phone {
+        font-size: 14px;
+      }
+
+      .hero {
+        padding: 48px 0;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<h1>A&O Tree Service</h1>
-<p>Specializing in dead and dangerous trees.</p>
+  <header>
+    <div class="container nav">
+      <div class="logo">A&O Tree Service</div>
+      <div class="nav-actions">
+        <a class="phone" href="tel:3343323873">334-332-3873</a>
+        <a class="btn" href="#estimate">Request a Free Estimate</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Licensed & Insured • Locally Owned</div>
+          <h1>Specializing in Dead and Dangerous Trees</h1>
+          <p>A&O Tree Service provides professional tree removal, storm cleanup, limb removal, stump grinding, and emergency tree service across East Central Alabama.</p>
+          <div class="hero-actions">
+            <a class="btn secondary" href="#estimate">Request a Free Estimate</a>
+            <a class="btn" href="tel:3343323873">Call Now</a>
+          </div>
+          <div class="hero-bullets">
+            <span class="pill">20+ Years Experience</span>
+            <span class="pill">Free Estimates</span>
+            <span class="pill">Emergency Service Available</span>
+          </div>
+        </div>
+
+        <div class="form-card" id="estimate">
+          <h2>Request a Free Estimate</h2>
+          <p>Tell us what you need. We’ll follow up as soon as possible.</p>
+
+          <form name="estimate-request" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="estimate-request" />
+
+            <input type="text" name="name" placeholder="Name" required />
+            <input type="tel" name="phone" placeholder="Phone" required />
+            <input type="email" name="email" placeholder="Email" />
+
+            <select name="preferred-contact" required>
+              <option value="">Preferred method of contact</option>
+              <option value="Call">Call</option>
+              <option value="Text">Text</option>
+              <option value="Email">Email</option>
+            </select>
+
+            <input type="text" name="service-location" placeholder="Property / service location" required />
+
+            <textarea name="message" placeholder="Tell us about the tree work you need"></textarea>
+
+            <button class="btn" type="submit">Submit Request</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust">
+      <div class="container trust-grid">
+        <div class="trust-item">Licensed & Insured</div>
+        <div class="trust-item">20+ Years Experience</div>
+        <div class="trust-item">Free Estimates</div>
+        <div class="trust-item">Emergency Service</div>
+        <div class="trust-item">Locally Owned</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="section-title">Tree Services</h2>
+        <p class="section-lead">From high-risk removals to storm cleanup, A&O Tree Service has the equipment and experience to handle the job safely.</p>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <h3>Dead & Dangerous Tree Removal</h3>
+            <p>Removal of hazardous trees near homes, driveways, roads, and structures.</p>
+          </div>
+
+          <div class="service-card">
+            <h3>Emergency Tree Service</h3>
+            <p>Fast response for fallen trees, storm damage, blocked access, and dangerous limbs.</p>
+          </div>
+
+          <div class="service-card">
+            <h3>Tree Removal</h3>
+            <p>Professional removal for unwanted, damaged, leaning, or problem trees.</p>
+          </div>
+
+          <div class="service-card">
+            <h3>Storm Cleanup</h3>
+            <p>Cleanup after storms, high winds, heavy rain, and fallen limbs.</p>
+          </div>
+
+          <div class="service-card">
+            <h3>Limb Removal</h3>
+            <p>Removal of broken, hanging, or overgrown limbs around your property.</p>
+          </div>
+
+          <div class="service-card">
+            <h3>Stump Grinding & Cleanup</h3>
+            <p>Stump grinding and debris cleanup to finish the job right.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="why">
+      <div class="container why-grid">
+        <div>
+          <h2 class="section-title">Why Choose A&O Tree Service?</h2>
+          <p>A&O Tree Service is owned by James Gates and based out of Notasulga, Alabama. The company brings over 20 years of experience to difficult tree work across the area.</p>
+
+          <div class="why-list">
+            <div>Specializing in dead and dangerous trees</div>
+            <div>Experienced operators and proper equipment</div>
+            <div>Clear communication and honest estimates</div>
+            <div>Emergency tree service available</div>
+          </div>
+        </div>
+
+        <div class="photo-box" aria-label="A&O Tree Service truck and equipment"></div>
+      </div>
+    </section>
+
+    <section class="areas">
+      <div class="container">
+        <h2 class="section-title">Service Area</h2>
+        <p class="section-lead">Serving homeowners and property owners across East Central Alabama.</p>
+
+        <div class="area-list">
+          <span>Auburn</span>
+          <span>Opelika</span>
+          <span>Lake Martin</span>
+          <span>Dadeville</span>
+          <span>Notasulga</span>
+          <span>Tuskegee</span>
+          <span>Tallassee</span>
+          <span>Montgomery</span>
+          <span>East Central Alabama</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="container">
+        <h2>Need a tree removed?</h2>
+        <p class="section-lead" style="margin-left:auto;margin-right:auto;">Request a free estimate today or call A&O Tree Service directly.</p>
+        <a class="btn" href="#estimate">Request a Free Estimate</a>
+        <a class="btn secondary" href="tel:3343323873">Call 334-332-3873</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p><strong>A&O Tree Service</strong></p>
+      <p>Specializing in dead and dangerous trees</p>
+      <p><a href="tel:3343323873">334-332-3873</a> • <a href="mailto:info@aotrees.com">info@aotrees.com</a></p>
+      <p>aotrees.com</p>
+    </div>
+  </footer>
 </body>
 </html>
