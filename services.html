@@ -110,6 +110,12 @@ max-width:780px;
 margin-bottom:28px;
 }
 
+.hero-buttons{
+display:flex;
+gap:14px;
+flex-wrap:wrap;
+}
+
 section{padding:80px 0;}
 
 .section-title{
@@ -158,6 +164,7 @@ margin-bottom:10px;
 
 .service-card p{
 color:#5a665f;
+margin-bottom:18px;
 }
 
 .feature-section{
@@ -267,6 +274,19 @@ max-width:760px;
 margin:0 auto 28px;
 }
 
+.footer-links{
+display:flex;
+justify-content:center;
+gap:18px;
+flex-wrap:wrap;
+margin:24px 0;
+}
+
+.footer-links a{
+font-weight:800;
+color:#d7ecae;
+}
+
 footer{
 background:var(--dark);
 color:white;
@@ -321,16 +341,18 @@ padding:70px 0;
 
 <div class="nav-right">
 <a href="index.html" class="nav-link">Home</a>
+<a href="about.html" class="nav-link">About</a>
 <a href="services.html" class="nav-link">Services</a>
 <a href="gallery.html" class="nav-link">Gallery</a>
 <a href="testimonials.html" class="nav-link">Reviews</a>
+<a href="contact.html" class="nav-link">Contact</a>
 
 <div class="phone">
 334-332-3873
-<small>Call Anytime</small>
+<small>Call or Text Anytime</small>
 </div>
 
-<a href="index.html#estimate" class="btn btn-primary">Request a Free Estimate</a>
+<a href="contact.html#contact-form" class="btn btn-primary">Request a Free Estimate</a>
 </div>
 
 </div>
@@ -345,8 +367,10 @@ padding:70px 0;
 A&O Tree Service provides professional tree removal, dead and dangerous tree removal, emergency tree service, storm cleanup, stump grinding, land clearing, brush removal, and site cleanup.
 </p>
 
-<a href="index.html#estimate" class="btn btn-secondary">Request a Free Estimate</a>
+<div class="hero-buttons">
+<a href="contact.html#contact-form" class="btn btn-secondary">Request a Free Estimate</a>
 <a href="tel:3343323873" class="btn btn-primary">Call 334-332-3873</a>
+</div>
 
 </div>
 </section>
@@ -367,6 +391,7 @@ From hazardous trees near homes to storm cleanup and stump grinding, A&O Tree Se
 <div class="service-card-content">
 <h3>Tree Removal</h3>
 <p>Removal of unwanted, damaged, leaning, or hazardous trees from residential and commercial properties.</p>
+<a href="tree-removal.html" class="btn btn-primary">Learn More</a>
 </div>
 </div>
 
@@ -375,6 +400,7 @@ From hazardous trees near homes to storm cleanup and stump grinding, A&O Tree Se
 <div class="service-card-content">
 <h3>Dead & Dangerous Trees</h3>
 <p>Specialized removal of unsafe trees near homes, roads, fences, power lines, and structures.</p>
+<a href="dead-dangerous-tree-removal.html" class="btn btn-primary">Learn More</a>
 </div>
 </div>
 
@@ -383,14 +409,16 @@ From hazardous trees near homes to storm cleanup and stump grinding, A&O Tree Se
 <div class="service-card-content">
 <h3>Emergency Tree Service</h3>
 <p>Fast response for storm damage, fallen trees, broken limbs, blocked driveways, and urgent tree hazards.</p>
+<a href="emergency-tree-service.html" class="btn btn-primary">Learn More</a>
 </div>
 </div>
 
 <div class="service-card">
-<img src="assets/ChainsawStorm.jpeg" alt="Storm cleanup service">
+<img src="assets/ChainSawStorm.jpg" alt="Storm cleanup service">
 <div class="service-card-content">
 <h3>Storm Cleanup</h3>
 <p>Cleanup after heavy winds, rain, falling limbs, damaged trees, and severe weather.</p>
+<a href="storm-cleanup.html" class="btn btn-primary">Learn More</a>
 </div>
 </div>
 
@@ -399,6 +427,7 @@ From hazardous trees near homes to storm cleanup and stump grinding, A&O Tree Se
 <div class="service-card-content">
 <h3>Limb Removal & Pruning</h3>
 <p>Removal of broken, hanging, overgrown, or hazardous limbs around homes and property.</p>
+<a href="tree-removal.html" class="btn btn-primary">Learn More</a>
 </div>
 </div>
 
@@ -407,6 +436,7 @@ From hazardous trees near homes to storm cleanup and stump grinding, A&O Tree Se
 <div class="service-card-content">
 <h3>Cleanup & Hauling</h3>
 <p>Brush, limb, and debris cleanup after tree work so the property is left clean and usable.</p>
+<a href="stump-grinding.html" class="btn btn-primary">Learn More</a>
 </div>
 </div>
 
@@ -430,6 +460,10 @@ A&O Tree Service focuses on more than cutting trees. The crew also works to prot
 <div class="check-item">Plant health considerations when removing diseased or damaged trees</div>
 <div class="check-item">Site preparation, brush removal, and debris cleanup after the job</div>
 </div>
+
+<div style="margin-top:26px;">
+<a href="land-clearing.html" class="btn btn-primary">Land Clearing & Site Work</a>
+</div>
 </div>
 
 <img class="feature-img" src="assets/TurfProtection.jpeg" alt="Property protection during tree service">
@@ -449,10 +483,11 @@ Need a section of property cleared? A&O Tree Service can help remove overgrowth,
 <div class="service-grid">
 
 <div class="service-card">
-<img src="assets/LandClearing.jpeg" alt="Land clearing">
+<img src="assets/LandClearing.JPG" alt="Land clearing">
 <div class="service-card-content">
 <h3>Land Clearing</h3>
 <p>Clearing overgrown lots, wooded areas, fence lines, and property edges.</p>
+<a href="land-clearing.html" class="btn btn-primary">Learn More</a>
 </div>
 </div>
 
@@ -461,6 +496,7 @@ Need a section of property cleared? A&O Tree Service can help remove overgrowth,
 <div class="service-card-content">
 <h3>Brush Removal</h3>
 <p>Removal of thick brush, small trees, limbs, and unwanted growth.</p>
+<a href="land-clearing.html" class="btn btn-primary">Learn More</a>
 </div>
 </div>
 
@@ -469,6 +505,7 @@ Need a section of property cleared? A&O Tree Service can help remove overgrowth,
 <div class="service-card-content">
 <h3>Skid Steer Work</h3>
 <p>Equipment support for brush cleanup, debris movement, and property preparation.</p>
+<a href="land-clearing.html" class="btn btn-primary">Learn More</a>
 </div>
 </div>
 
@@ -507,7 +544,7 @@ A simple process helps you get the tree work handled without confusion.
 
 <div class="process-card">
 <div class="process-number">4</div>
-<h3>Safe Work</h3>
+<h3>Safe Removal</h3>
 <p>The crew completes the job with proper equipment and care.</p>
 </div>
 
@@ -554,7 +591,7 @@ A&O Tree Service is based in Notasulga, Alabama and serves homeowners, landowner
 Request a free estimate from A&O Tree Service. Licensed, insured, locally owned, and specializing in dead and dangerous trees.
 </p>
 
-<a href="index.html#estimate" class="btn btn-secondary">Request a Free Estimate</a>
+<a href="contact.html#contact-form" class="btn btn-secondary">Request a Free Estimate</a>
 <a href="tel:3343323873" class="btn btn-primary">Call 334-332-3873</a>
 
 </div>
@@ -577,6 +614,20 @@ Notasulga, AL 36866
 <p>
 334-332-3873 • info@aotrees.com
 </p>
+
+<div class="footer-links">
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="tree-removal.html">Tree Removal</a>
+<a href="dead-dangerous-tree-removal.html">Dangerous Trees</a>
+<a href="emergency-tree-service.html">Emergency Service</a>
+<a href="storm-cleanup.html">Storm Cleanup</a>
+<a href="land-clearing.html">Land Clearing</a>
+<a href="stump-grinding.html">Stump Grinding</a>
+<a href="gallery.html">Gallery</a>
+<a href="testimonials.html">Reviews</a>
+<a href="contact.html">Contact</a>
+</div>
 
 <p>
 Licensed & Insured • Locally Owned • Free Estimates
