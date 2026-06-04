@@ -110,6 +110,12 @@ max-width:780px;
 margin-bottom:28px;
 }
 
+.hero-buttons{
+display:flex;
+gap:14px;
+flex-wrap:wrap;
+}
+
 section{padding:80px 0;}
 
 .section-title{
@@ -223,6 +229,7 @@ margin-bottom:10px;
 
 .value-content p{
 color:#5a665f;
+margin-bottom:18px;
 }
 
 .owner-section{
@@ -288,6 +295,31 @@ font-weight:800;
 font-size:14px;
 }
 
+.service-links{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+}
+
+.service-link-card{
+background:white;
+border-radius:20px;
+padding:22px;
+box-shadow:var(--shadow);
+border:1px solid #e3e8e1;
+}
+
+.service-link-card h3{
+color:var(--green);
+font-size:22px;
+margin-bottom:8px;
+}
+
+.service-link-card p{
+color:#5a665f;
+margin-bottom:16px;
+}
+
 .cta{
 background:var(--green);
 color:white;
@@ -304,6 +336,19 @@ margin-bottom:18px;
 font-size:21px;
 max-width:760px;
 margin:0 auto 28px;
+}
+
+.footer-links{
+display:flex;
+justify-content:center;
+gap:18px;
+flex-wrap:wrap;
+margin:24px 0;
+}
+
+.footer-links a{
+font-weight:800;
+color:#d7ecae;
 }
 
 footer{
@@ -335,7 +380,9 @@ flex-direction:column;
 .story-grid,
 .owner-grid,
 .values-grid,
-.trust-grid{
+trust-grid,
+.trust-grid,
+.service-links{
 grid-template-columns:1fr;
 }
 
@@ -370,7 +417,7 @@ padding:70px 0;
 
 <div class="phone">
 334-332-3873
-<small>Call Anytime</small>
+<small>Call or Text Anytime</small>
 </div>
 
 <a href="contact.html#contact-form" class="btn btn-primary">Request a Free Estimate</a>
@@ -388,8 +435,10 @@ padding:70px 0;
 A&O Tree Service LLC is a locally owned, licensed and insured tree service company based in Notasulga, Alabama. The company specializes in dead and dangerous trees and brings over 20 years of experience to difficult tree work.
 </p>
 
+<div class="hero-buttons">
 <a href="contact.html#contact-form" class="btn btn-secondary">Request a Free Estimate</a>
 <a href="tel:3343323873" class="btn btn-primary">Call 334-332-3873</a>
+</div>
 
 </div>
 </section>
@@ -411,6 +460,8 @@ The company focuses on professional tree removal, storm cleanup, dangerous tree 
 <p>
 When a tree is dead, leaning, storm-damaged, or too close to a home, experience matters. A&O brings the equipment, planning, and care needed to handle difficult jobs safely.
 </p>
+
+<a href="services.html" class="btn btn-primary">View Services</a>
 </div>
 
 <img class="story-img" src="assets/BucketTruck.jpeg" alt="A&O Tree Service bucket truck work">
@@ -469,6 +520,7 @@ Customers call A&O for tree work that requires experience, equipment, and attent
 <div class="value-content">
 <h3>Dangerous Tree Removal</h3>
 <p>Removing dead, damaged, leaning, or unsafe trees near homes and structures.</p>
+<a href="dead-dangerous-tree-removal.html" class="btn btn-primary">Learn More</a>
 </div>
 </div>
 
@@ -477,6 +529,7 @@ Customers call A&O for tree work that requires experience, equipment, and attent
 <div class="value-content">
 <h3>Property Protection</h3>
 <p>Careful limb lowering, proper equipment use, and planning around homes and yards.</p>
+<a href="gallery.html" class="btn btn-primary">View Gallery</a>
 </div>
 </div>
 
@@ -485,6 +538,7 @@ Customers call A&O for tree work that requires experience, equipment, and attent
 <div class="value-content">
 <h3>Cleanup After the Job</h3>
 <p>Debris removal, brush cleanup, and leaving the property ready for use.</p>
+<a href="stump-grinding.html" class="btn btn-primary">Cleanup Services</a>
 </div>
 </div>
 
@@ -512,10 +566,66 @@ The company has built its reputation around difficult tree work, practical commu
 <div>Professional equipment for difficult jobs</div>
 <div>Serving East Central Alabama</div>
 </div>
+
+<div style="margin-top:28px;">
+<a href="testimonials.html" class="btn btn-secondary">Read Customer Reviews</a>
+<a href="contact.html#contact-form" class="btn btn-primary">Request Estimate</a>
+</div>
 </div>
 
 <img class="owner-img" src="assets/AOTreeTruck2.jpeg" alt="A&O Tree Service truck">
 
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<h2 class="section-title">Common Services</h2>
+
+<p class="section-lead">
+A&O provides a full range of tree service and property cleanup work across East Central Alabama.
+</p>
+
+<div class="service-links">
+
+<div class="service-link-card">
+<h3>Tree Removal</h3>
+<p>Removal of damaged, leaning, dead, or unwanted trees.</p>
+<a href="tree-removal.html" class="btn btn-primary">Learn More</a>
+</div>
+
+<div class="service-link-card">
+<h3>Dead & Dangerous Trees</h3>
+<p>Specialized removal of hazardous trees near homes and structures.</p>
+<a href="dead-dangerous-tree-removal.html" class="btn btn-primary">Learn More</a>
+</div>
+
+<div class="service-link-card">
+<h3>Emergency Tree Service</h3>
+<p>Help with fallen trees, storm damage, and urgent hazards.</p>
+<a href="emergency-tree-service.html" class="btn btn-primary">Learn More</a>
+</div>
+
+<div class="service-link-card">
+<h3>Storm Cleanup</h3>
+<p>Cleanup after severe weather, high winds, and fallen limbs.</p>
+<a href="storm-cleanup.html" class="btn btn-primary">Learn More</a>
+</div>
+
+<div class="service-link-card">
+<h3>Land Clearing</h3>
+<p>Brush removal, small tree removal, and skid steer support.</p>
+<a href="land-clearing.html" class="btn btn-primary">Learn More</a>
+</div>
+
+<div class="service-link-card">
+<h3>Stump Grinding</h3>
+<p>Stump grinding and cleanup after tree removal.</p>
+<a href="stump-grinding.html" class="btn btn-primary">Learn More</a>
+</div>
+
+</div>
 </div>
 </section>
 
@@ -575,6 +685,20 @@ Notasulga, AL 36866
 <p>
 334-332-3873 • info@aotrees.com
 </p>
+
+<div class="footer-links">
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="tree-removal.html">Tree Removal</a>
+<a href="dead-dangerous-tree-removal.html">Dangerous Trees</a>
+<a href="emergency-tree-service.html">Emergency Service</a>
+<a href="storm-cleanup.html">Storm Cleanup</a>
+<a href="land-clearing.html">Land Clearing</a>
+<a href="stump-grinding.html">Stump Grinding</a>
+<a href="gallery.html">Gallery</a>
+<a href="testimonials.html">Reviews</a>
+<a href="contact.html">Contact</a>
+</div>
 
 <p>
 Licensed & Insured • Locally Owned • Free Estimates
