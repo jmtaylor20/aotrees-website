@@ -8,7 +8,6 @@
 <meta name="description" content="A&O Tree Service specializes in dead and dangerous trees. Licensed and insured tree service serving Auburn, Opelika, Lake Martin, Tallassee, Montgomery and East Central Alabama.">
 
 <style>
-
 :root{
 --green:#004b27;
 --green2:#0c6a3b;
@@ -19,15 +18,8 @@
 --shadow:0 14px 40px rgba(0,0,0,.12);
 }
 
-*{
-box-sizing:border-box;
-margin:0;
-padding:0;
-}
-
-html{
-scroll-behavior:smooth;
-}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
 
 body{
 font-family:Arial,Helvetica,sans-serif;
@@ -36,20 +28,9 @@ color:#173321;
 line-height:1.6;
 }
 
-.container{
-width:min(1180px,92%);
-margin:auto;
-}
-
-a{
-text-decoration:none;
-color:inherit;
-}
-
-img{
-max-width:100%;
-display:block;
-}
+.container{width:min(1180px,92%);margin:auto;}
+a{text-decoration:none;color:inherit;}
+img{max-width:100%;display:block;}
 
 header{
 background:rgba(255,255,255,.96);
@@ -67,14 +48,17 @@ align-items:center;
 padding:14px 0;
 }
 
-.logo img{
-height:82px;
-}
+.logo img{height:82px;}
 
 .nav-right{
 display:flex;
 align-items:center;
 gap:18px;
+}
+
+.nav-link{
+font-weight:800;
+color:var(--green);
 }
 
 .phone{
@@ -99,19 +83,10 @@ font-weight:800;
 transition:.25s;
 }
 
-.btn:hover{
-transform:translateY(-2px);
-}
+.btn:hover{transform:translateY(-2px);}
 
-.btn-primary{
-background:var(--green);
-color:white;
-}
-
-.btn-secondary{
-background:var(--lime);
-color:#122211;
-}
+.btn-primary{background:var(--green);color:white;}
+.btn-secondary{background:var(--lime);color:#122211;}
 
 .hero{
 background:
@@ -192,10 +167,7 @@ color:#5f6d65;
 margin-bottom:18px;
 }
 
-form{
-display:grid;
-gap:14px;
-}
+form{display:grid;gap:14px;}
 
 input,
 select,
@@ -244,9 +216,7 @@ box-shadow:var(--shadow);
 color:var(--green);
 }
 
-section{
-padding:82px 0;
-}
+section{padding:82px 0;}
 
 .section-title{
 font-size:clamp(42px,5vw,58px);
@@ -282,9 +252,7 @@ width:100%;
 object-fit:cover;
 }
 
-.service-content{
-padding:24px;
-}
+.service-content{padding:24px;}
 
 .service-content h3{
 color:var(--green);
@@ -292,9 +260,7 @@ margin-bottom:10px;
 font-size:24px;
 }
 
-.gallery{
-background:var(--light);
-}
+.gallery{background:var(--light);}
 
 .gallery-grid{
 display:grid;
@@ -310,6 +276,27 @@ border-radius:22px;
 box-shadow:var(--shadow);
 }
 
+.reviews-preview{
+background:white;
+text-align:center;
+}
+
+.review-score{
+display:inline-flex;
+align-items:center;
+gap:12px;
+background:var(--light);
+border:1px solid #dfe6dc;
+border-radius:18px;
+padding:16px 22px;
+font-weight:900;
+color:var(--green);
+margin-bottom:24px;
+flex-wrap:wrap;
+}
+
+.stars{color:#d8a900;}
+
 .emergency-banner{
 background:linear-gradient(90deg,var(--green),var(--green2));
 color:white;
@@ -318,8 +305,8 @@ padding:22px;
 font-size:22px;
 font-weight:800;
 }
-  @media (max-width:980px){
 
+@media (max-width:980px){
 .hero-grid,
 .services-grid,
 .gallery-grid,
@@ -327,17 +314,9 @@ font-weight:800;
 grid-template-columns:1fr;
 }
 
-.hero{
-padding:60px 0;
-}
-
-.hero h1{
-font-size:54px;
-}
-
-.logo img{
-height:70px;
-}
+.hero{padding:60px 0;}
+.hero h1{font-size:54px;}
+.logo img{height:70px;}
 
 .nav{
 flex-direction:column;
@@ -348,12 +327,8 @@ gap:14px;
 flex-direction:column;
 }
 
-section{
-padding:60px 0;
+section{padding:60px 0;}
 }
-
-}
-
 </style>
 </head>
 
@@ -362,36 +337,29 @@ padding:60px 0;
 <header>
 <div class="container nav">
 
-<a href="#" class="logo">
+<a href="index.html" class="logo">
 <img src="logo-simple.png" alt="A&O Tree Service">
 </a>
 
 <div class="nav-right">
+<a href="testimonials.html" class="nav-link">Reviews</a>
 
-  <a href="testimonials.html" style="font-weight:800;color:#004b27;">Testimonials</a>
-  
 <div class="phone">
 334-332-3873
 <small>Call Anytime</small>
 </div>
 
-<a href="#estimate" class="btn btn-primary">
-Request a Free Estimate
-</a>
-
+<a href="#estimate" class="btn btn-primary">Request a Free Estimate</a>
 </div>
+
 </div>
 </header>
 
 <section class="hero">
-
 <div class="container hero-grid">
 
 <div>
-
-<div class="hero-eyebrow">
-LICENSED & INSURED • LOCALLY OWNED
-</div>
+<div class="hero-eyebrow">LICENSED & INSURED • LOCALLY OWNED</div>
 
 <h1>
 Specializing in<br>
@@ -406,6 +374,7 @@ A&O Tree Service provides professional tree removal, storm cleanup, limb removal
 <div class="hero-buttons">
 <a href="#estimate" class="btn btn-secondary">Request a Free Estimate</a>
 <a href="tel:3343323873" class="btn btn-primary">Call Now</a>
+<a href="testimonials.html" class="btn btn-primary">Read Reviews</a>
 </div>
 
 <div class="pills">
@@ -413,20 +382,13 @@ A&O Tree Service provides professional tree removal, storm cleanup, limb removal
 <div class="pill">Free Estimates</div>
 <div class="pill">Emergency Service Available</div>
 </div>
-
 </div>
 
 <div class="form-card" id="estimate">
-
 <h2>Request a Free Estimate</h2>
 <p>Tell us what you need. We’ll follow up as soon as possible.</p>
 
-<form
-name="contact"
-method="POST"
-data-netlify="true"
-netlify-honeypot="bot-field">
-
+<form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
 <input type="hidden" name="form-name" value="contact">
 
 <p hidden>
@@ -434,9 +396,7 @@ netlify-honeypot="bot-field">
 </p>
 
 <input type="text" name="name" placeholder="Name" required>
-
 <input type="tel" name="phone" placeholder="Phone" required>
-
 <input type="email" name="email" placeholder="Email">
 
 <select name="preferred-contact">
@@ -448,34 +408,26 @@ netlify-honeypot="bot-field">
 
 <input type="text" name="location" placeholder="Property / service location">
 
-<textarea
-name="details"
-placeholder="Tell us about the tree work you need"></textarea>
+<textarea name="details" placeholder="Tell us about the tree work you need"></textarea>
 
-<button class="submit-btn" type="submit">
-Submit Request
-</button>
-
+<button class="submit-btn" type="submit">Submit Request</button>
 </form>
 </div>
+
 </div>
 </section>
 
 <section class="trust">
-
 <div class="container trust-grid">
-
 <div class="trust-item">Licensed & Insured</div>
 <div class="trust-item">20+ Years Experience</div>
 <div class="trust-item">Locally Owned</div>
 <div class="trust-item">Emergency Services</div>
 <div class="trust-item">Free Estimates</div>
-
 </div>
 </section>
 
 <section>
-
 <div class="container">
 
 <h2 class="section-title">Our Services</h2>
@@ -487,7 +439,7 @@ Professional tree work for homeowners, landowners, and businesses across East Ce
 <div class="services-grid">
 
 <div class="service-card">
-<img src="truck-tree-service.jpeg" alt="">
+<img src="truck-tree-service.jpeg" alt="A&O Tree Service truck and tree removal equipment">
 <div class="service-content">
 <h3>Tree Removal</h3>
 <p>Safe removal of dead, hazardous, or unwanted trees.</p>
@@ -495,7 +447,7 @@ Professional tree work for homeowners, landowners, and businesses across East Ce
 </div>
 
 <div class="service-card">
-<img src="storm-cleanup.jpeg" alt="">
+<img src="storm-cleanup.jpeg" alt="Storm cleanup and tree debris removal">
 <div class="service-content">
 <h3>Storm Cleanup</h3>
 <p>Fast response after storms and fallen trees.</p>
@@ -503,7 +455,7 @@ Professional tree work for homeowners, landowners, and businesses across East Ce
 </div>
 
 <div class="service-card">
-<img src="cleanup1.jpg" alt="">
+<img src="cleanup1.jpg" alt="Cleanup and hauling after tree removal">
 <div class="service-content">
 <h3>Cleanup & Hauling</h3>
 <p>Debris removal and complete site cleanup.</p>
@@ -515,7 +467,6 @@ Professional tree work for homeowners, landowners, and businesses across East Ce
 </section>
 
 <section class="gallery">
-
 <div class="container">
 
 <h2 class="section-title">Recent Work</h2>
@@ -525,22 +476,40 @@ A look at recent A&O Tree Service projects and equipment in action.
 </p>
 
 <div class="gallery-grid">
-
-<img src="bucket-truck.jpeg" alt="">
-<img src="hero-tree-service.jpeg" alt="">
-<img src="cleanup1.jpg" alt="">
-
+<img src="bucket-truck.jpeg" alt="Bucket truck tree service work">
+<img src="hero-tree-service.jpeg" alt="Large tree removal near house">
+<img src="cleanup1.jpg" alt="Tree removal cleanup">
 </div>
 
 </div>
 </section>
 
-<section style="background:var(--green);color:white;">
+<section class="reviews-preview">
+<div class="container">
 
+<h2 class="section-title">Customer Reviews</h2>
+
+<p class="section-lead" style="margin-left:auto;margin-right:auto;">
+A&O Tree Service LLC is rated 4.8 stars on Google with 43 reviews from customers across East Central Alabama.
+</p>
+
+<div class="review-score">
+<span style="font-size:32px;">4.8</span>
+<span class="stars">★★★★★</span>
+<span>43 Google Reviews</span>
+</div>
+
+<br>
+
+<a href="testimonials.html" class="btn btn-primary">Read Customer Reviews</a>
+
+</div>
+</section>
+
+<section style="background:var(--green);color:white;">
 <div class="container hero-grid">
 
 <div>
-
 <h2 style="font-size:58px;line-height:1;margin-bottom:22px;">
 Why Choose A&O Tree Service?
 </h2>
@@ -553,18 +522,16 @@ A&O Tree Service is owned by James Gates and based out of Notasulga, Alabama. Th
 <div class="pill" style="margin-bottom:12px;">Experienced operators and proper equipment</div>
 <div class="pill" style="margin-bottom:12px;">Clear communication and honest estimates</div>
 <div class="pill">Emergency tree service available</div>
-
 </div>
 
 <div>
-<img src="truck-tree-service.jpeg" style="border-radius:26px;">
+<img src="truck-tree-service.jpeg" alt="A&O Tree Service truck" style="border-radius:26px;">
 </div>
 
 </div>
 </section>
 
 <section>
-
 <div class="container">
 
 <h2 class="section-title">Service Area</h2>
@@ -574,7 +541,6 @@ Serving homeowners and property owners across East Central Alabama.
 </p>
 
 <div class="pills">
-
 <div class="pill" style="color:var(--green);border-color:#d7ddd8;">Auburn</div>
 <div class="pill" style="color:var(--green);border-color:#d7ddd8;">Opelika</div>
 <div class="pill" style="color:var(--green);border-color:#d7ddd8;">Lake Martin</div>
@@ -583,7 +549,6 @@ Serving homeowners and property owners across East Central Alabama.
 <div class="pill" style="color:var(--green);border-color:#d7ddd8;">Tuskegee</div>
 <div class="pill" style="color:var(--green);border-color:#d7ddd8;">Tallassee</div>
 <div class="pill" style="color:var(--green);border-color:#d7ddd8;">Montgomery</div>
-
 </div>
 
 </div>
@@ -594,40 +559,28 @@ Emergency Tree Service Available • Call 334-332-3873
 </div>
 
 <footer style="background:var(--dark);color:white;padding:70px 0;">
-
 <div class="container" style="text-align:center;">
 
-<img
-src="logo-oval.png"
-alt=""
-style="max-width:460px;margin:auto;margin-bottom:26px;">
+<img src="logo-oval.png" alt="A&O Tree Service" style="max-width:460px;margin:auto;margin-bottom:26px;">
 
-<h3 style="margin-bottom:10px;">
-A&O Tree Service
-</h3>
+<h3 style="margin-bottom:10px;">A&O Tree Service LLC</h3>
+
+<p style="margin-bottom:8px;">Specializing in dead and dangerous trees</p>
 
 <p style="margin-bottom:8px;">
-Specializing in dead and dangerous trees
+3960 Tallapoosa Street<br>
+Notasulga, AL 36866
 </p>
 
-  <p style="margin-bottom:8px;">
-3960 Tallapoosa Street, Notasulga, AL 36866
-</p>
-  
 <p style="margin-bottom:8px;">
 334-332-3873 • info@aotrees.com
 </p>
 
 <p style="margin-bottom:8px;">
-• Licensed & Insured
-• Locally Owned
-• Free Estimates
-• Emergency Services Available
+Licensed & Insured • Locally Owned • Free Estimates • Emergency Services Available
 </p>
-  
-<p>
-aotrees.com
-</p>
+
+<p>aotrees.com</p>
 
 </div>
 </footer>
