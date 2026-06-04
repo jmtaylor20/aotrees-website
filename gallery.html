@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Photo Gallery | A&O Tree Service</title>
+
+<meta name="description" content="View recent A&O Tree Service projects including tree removal, dead and dangerous trees, storm cleanup, land clearing, bucket truck work, and equipment photos across East Central Alabama.">
+
+<style>
+:root{
+--green:#004b27;
+--green2:#0c6a3b;
+--lime:#95b81f;
+--dark:#062716;
+--light:#f5f7f4;
+--white:#ffffff;
+--shadow:0 14px 40px rgba(0,0,0,.12);
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:white;
+color:#173321;
+line-height:1.6;
+}
+
+.container{width:min(1180px,92%);margin:auto;}
+a{text-decoration:none;color:inherit;}
+img{max-width:100%;display:block;}
+
+header{
+background:rgba(255,255,255,.96);
+position:sticky;
+top:0;
+z-index:1000;
+border-bottom:1px solid #e3e7e2;
+}
+
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:14px 0;
+}
+
+.logo img{height:82px;}
+
+.nav-right{
+display:flex;
+align-items:center;
+gap:18px;
+}
+
+.nav-link{
+font-weight:800;
+color:var(--green);
+}
+
+.phone{
+font-weight:800;
+color:var(--green);
+font-size:17px;
+}
+
+.phone small{
+display:block;
+font-size:12px;
+font-weight:600;
+opacity:.7;
+margin-top:-2px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 24px;
+border-radius:999px;
+font-weight:800;
+transition:.25s;
+}
+
+.btn:hover{transform:translateY(-2px);}
+.btn-primary{background:var(--green);color:white;}
+.btn-secondary{background:var(--lime);color:#122211;}
+
+.hero{
+background:
+linear-gradient(rgba(0,65,35,.74),rgba(0,65,35,.74)),
+url("assets/TreeRemovalNearHouse.jpeg");
+background-size:cover;
+background-position:center;
+color:white;
+padding:95px 0;
+}
+
+.hero h1{
+font-size:clamp(54px,7vw,86px);
+line-height:.95;
+max-width:850px;
+margin-bottom:22px;
+}
+
+.hero p{
+font-size:22px;
+max-width:760px;
+margin-bottom:28px;
+}
+
+section{padding:80px 0;}
+
+.section-title{
+font-size:clamp(40px,5vw,62px);
+line-height:1;
+color:var(--green);
+margin-bottom:16px;
+}
+
+.section-lead{
+font-size:20px;
+color:#5a665f;
+max-width:800px;
+margin-bottom:38px;
+}
+
+.gallery-section:nth-of-type(even){
+background:var(--light);
+}
+
+.photo-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:22px;
+}
+
+.photo-card{
+background:white;
+border-radius:24px;
+overflow:hidden;
+box-shadow:var(--shadow);
+border:1px solid #e3e8e1;
+}
+
+.photo-card img{
+width:100%;
+height:280px;
+object-fit:cover;
+}
+
+.photo-card h3{
+color:var(--green);
+font-size:22px;
+padding:18px 20px 4px;
+}
+
+.photo-card p{
+padding:0 20px 22px;
+color:#5a665f;
+}
+
+.cta{
+background:var(--green);
+color:white;
+text-align:center;
+}
+
+.cta h2{
+font-size:clamp(42px,5vw,64px);
+line-height:1;
+margin-bottom:18px;
+}
+
+.cta p{
+font-size:21px;
+max-width:760px;
+margin:0 auto 28px;
+}
+
+footer{
+background:var(--dark);
+color:white;
+padding:70px 0;
+text-align:center;
+}
+
+footer img{
+max-width:420px;
+margin:0 auto 26px;
+}
+
+footer p{margin-bottom:10px;}
+
+@media(max-width:900px){
+.nav{
+flex-direction:column;
+gap:14px;
+}
+
+.nav-right{
+flex-direction:column;
+}
+
+.logo img{height:70px;}
+
+.photo-grid{
+grid-template-columns:1fr;
+}
+
+.hero{
+padding:70px 0;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container nav">
+
+<a href="index.html" class="logo">
+<img src="logo-simple.png" alt="A&O Tree Service">
+</a>
+
+<div class="nav-right">
+<a href="index.html" class="nav-link">Home</a>
+<a href="gallery.html" class="nav-link">Gallery</a>
+<a href="testimonials.html" class="nav-link">Reviews</a>
+
+<div class="phone">
+334-332-3873
+<small>Call Anytime</small>
+</div>
+
+<a href="index.html#estimate" class="btn btn-primary">Request a Free Estimate</a>
+</div>
+
+</div>
+</header>
+
+<section class="hero">
+<div class="container">
+
+<h1>Photo Gallery</h1>
+
+<p>
+See recent A&O Tree Service projects including dead and dangerous tree removal, storm cleanup, land clearing, equipment work, and cleanup across East Central Alabama.
+</p>
+
+<a href="index.html#estimate" class="btn btn-secondary">Request a Free Estimate</a>
+
+</div>
+</section>
+
+<section class="gallery-section">
+<div class="container">
+
+<h2 class="section-title">Dead & Dangerous Trees</h2>
+<p class="section-lead">High-risk trees near homes, driveways, fences, and property structures.</p>
+
+<div class="photo-grid">
+
+<div class="photo-card">
+<img src="assets/ADeadAndDangerousTree.jpeg" alt="Dead and dangerous tree removal">
+<h3>Dead Tree Removal</h3>
+<p>Removing hazardous trees before they damage property.</p>
+</div>
+
+<div class="photo-card">
+<img src="assets/DangerousDeadTreeRemoval.jpeg" alt="Dangerous dead tree removal">
+<h3>Hazard Tree Work</h3>
+<p>Specialized work for unsafe trees and limbs.</p>
+</div>
+
+<div class="photo-card">
+<img src="assets/DangerousTree.jpeg" alt="Dangerous tree near property">
+<h3>Tree Risk Removal</h3>
+<p>Careful removal around homes and nearby structures.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="gallery-section">
+<div class="container">
+
+<h2 class="section-title">Bucket Truck & Crane Work</h2>
+<p class="section-lead">Proper equipment for difficult removals, high limbs, and controlled cuts.</p>
+
+<div class="photo-grid">
+
+<div class="photo-card">
+<img src="assets/BucketTruck.jpeg" alt="Bucket truck tree work">
+<h3>Bucket Truck Work</h3>
+<p>Safe access for high limbs and technical removals.</p>
+</div>
+
+<div class="photo-card">
+<img src="assets/CraneLoweringLimb.jpeg" alt="Crane lowering tree limb">
+<h3>Controlled Limb Lowering</h3>
+<p>Lowering large limbs while protecting the property below.</p>
+</div>
+
+<div class="photo-card">
+<img src="assets/TreeTopCut.jpeg" alt="Tree top cutting">
+<h3>Tree Top Removal</h3>
+<p>Technical cuts in tight areas.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="gallery-section">
+<div class="container">
+
+<h2 class="section-title">Storm Cleanup</h2>
+<p class="section-lead">Fallen trees, broken limbs, storm debris, and blocked access cleanup.</p>
+
+<div class="photo-grid">
+
+<div class="photo-card">
+<img src="assets/ChainsawStorm.jpeg" alt="Storm cleanup chainsaw work">
+<h3>Storm Damage</h3>
+<p>Clearing storm-damaged trees and limbs.</p>
+</div>
+
+<div class="photo-card">
+<img src="assets/FallenTree.jpeg" alt="Fallen tree cleanup">
+<h3>Fallen Trees</h3>
+<p>Removing fallen trees from yards and properties.</p>
+</div>
+
+<div class="photo-card">
+<img src="assets/FallenTreeRemoval.jpeg" alt="Fallen tree removal">
+<h3>Emergency Cleanup</h3>
+<p>Fast cleanup after tree damage.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="gallery-section">
+<div class="container">
+
+<h2 class="section-title">Land Clearing & Brush Removal</h2>
+<p class="section-lead">Clearing overgrowth, brush, limbs, and preparing property for future use.</p>
+
+<div class="photo-grid">
+
+<div class="photo-card">
+<img src="assets/LandClearing.jpeg" alt="Land clearing service">
+<h3>Land Clearing</h3>
+<p>Opening up overgrown property and wooded areas.</p>
+</div>
+
+<div class="photo-card">
+<img src="assets/ThickBrush.jpeg" alt="Thick brush removal">
+<h3>Brush Removal</h3>
+<p>Removing dense brush and unwanted growth.</p>
+</div>
+
+<div class="photo-card">
+<img src="assets/LargeBrushCleanUp.jpeg" alt="Large brush cleanup">
+<h3>Large Cleanup Jobs</h3>
+<p>Handling large brush and debris piles.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="gallery-section">
+<div class="container">
+
+<h2 class="section-title">Equipment & Cleanup</h2>
+<p class="section-lead">A&O Tree Service brings the equipment needed to finish the job right.</p>
+
+<div class="photo-grid">
+
+<div class="photo-card">
+<img src="assets/AOTreeTruck.jpeg" alt="A&O Tree Service truck">
+<h3>Tree Service Truck</h3>
+<p>Professional equipment for tree removal and cleanup.</p>
+</div>
+
+<div class="photo-card">
+<img src="assets/SkidSteer.jpeg" alt="Skid steer cleanup">
+<h3>Skid Steer Work</h3>
+<p>Moving brush, limbs, debris, and cleanup material.</p>
+</div>
+
+<div class="photo-card">
+<img src="assets/CollectionTruck.jpeg" alt="Collection truck cleanup">
+<h3>Debris Hauling</h3>
+<p>Cleanup and hauling after tree work.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="gallery-section">
+<div class="container">
+
+<h2 class="section-title">Before & After</h2>
+<p class="section-lead">Tree removal and cleanup that leaves the property ready for use.</p>
+
+<div class="photo-grid">
+
+<div class="photo-card">
+<img src="assets/BrokenTreeBefore.jpeg" alt="Broken tree before removal">
+<h3>Before Removal</h3>
+<p>Broken and damaged trees before cleanup.</p>
+</div>
+
+<div class="photo-card">
+<img src="assets/AfterTreeCutCleanUp.jpeg" alt="After tree cut cleanup">
+<h3>After Cleanup</h3>
+<p>Property cleanup after tree removal.</p>
+</div>
+
+<div class="photo-card">
+<img src="assets/TreeTrimmingAfterAndChainSaw.jpeg" alt="Tree trimming after cleanup">
+<h3>Finished Work</h3>
+<p>Clean results after trimming and removal.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="cta">
+<div class="container">
+
+<h2>Need Tree Work Done?</h2>
+
+<p>
+Request a free estimate from A&O Tree Service. Licensed, insured, locally owned, and specializing in dead and dangerous trees.
+</p>
+
+<a href="index.html#estimate" class="btn btn-secondary">Request a Free Estimate</a>
+<a href="tel:3343323873" class="btn btn-primary">Call 334-332-3873</a>
+
+</div>
+</section>
+
+<footer>
+<div class="container">
+
+<img src="logo-oval.png" alt="A&O Tree Service">
+
+<h3>A&O Tree Service LLC</h3>
+
+<p>Specializing in dead and dangerous trees</p>
+
+<p>
+3960 Tallapoosa Street<br>
+Notasulga, AL 36866
+</p>
+
+<p>
+334-332-3873 • info@aotrees.com
+</p>
+
+<p>
+Licensed & Insured • Locally Owned • Free Estimates
+</p>
+
+<p>aotrees.com</p>
+
+</div>
+</footer>
+
+</body>
+</html>
