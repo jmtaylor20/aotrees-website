@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About A&O Tree Service | Notasulga, Alabama</title>
+
+<meta name="description" content="Learn about A&O Tree Service LLC, a locally owned, licensed and insured tree service company based in Notasulga, Alabama. Specializing in dead and dangerous trees with over 20 years of experience.">
+
+<style>
+:root{
+--green:#004b27;
+--green2:#0c6a3b;
+--lime:#95b81f;
+--dark:#062716;
+--light:#f5f7f4;
+--white:#ffffff;
+--shadow:0 14px 40px rgba(0,0,0,.12);
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:white;
+color:#173321;
+line-height:1.6;
+}
+
+.container{width:min(1180px,92%);margin:auto;}
+a{text-decoration:none;color:inherit;}
+img{max-width:100%;display:block;}
+
+header{
+background:rgba(255,255,255,.96);
+position:sticky;
+top:0;
+z-index:1000;
+border-bottom:1px solid #e3e7e2;
+}
+
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:14px 0;
+}
+
+.logo img{height:82px;}
+
+.nav-right{
+display:flex;
+align-items:center;
+gap:18px;
+}
+
+.nav-link{
+font-weight:800;
+color:var(--green);
+}
+
+.phone{
+font-weight:800;
+color:var(--green);
+font-size:17px;
+}
+
+.phone small{
+display:block;
+font-size:12px;
+font-weight:600;
+opacity:.7;
+margin-top:-2px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 24px;
+border-radius:999px;
+font-weight:800;
+transition:.25s;
+}
+
+.btn:hover{transform:translateY(-2px);}
+.btn-primary{background:var(--green);color:white;}
+.btn-secondary{background:var(--lime);color:#122211;}
+
+.hero{
+background:
+linear-gradient(rgba(0,65,35,.72),rgba(0,65,35,.72)),
+url("assets/AOTreeTruck.jpeg");
+background-size:cover;
+background-position:center;
+color:white;
+padding:95px 0;
+}
+
+.hero h1{
+font-size:clamp(54px,7vw,86px);
+line-height:.95;
+max-width:900px;
+margin-bottom:22px;
+}
+
+.hero p{
+font-size:22px;
+max-width:780px;
+margin-bottom:28px;
+}
+
+section{padding:80px 0;}
+
+.section-title{
+font-size:clamp(40px,5vw,62px);
+line-height:1;
+color:var(--green);
+margin-bottom:16px;
+}
+
+.section-lead{
+font-size:20px;
+color:#5a665f;
+max-width:850px;
+margin-bottom:38px;
+}
+
+.story-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.story-card{
+background:white;
+border-radius:28px;
+padding:34px;
+box-shadow:var(--shadow);
+border:1px solid #e3e8e1;
+}
+
+.story-card h2{
+color:var(--green);
+font-size:40px;
+line-height:1.05;
+margin-bottom:18px;
+}
+
+.story-card p{
+font-size:19px;
+color:#4f5d55;
+margin-bottom:18px;
+}
+
+.story-img{
+width:100%;
+height:520px;
+object-fit:cover;
+border-radius:28px;
+box-shadow:var(--shadow);
+}
+
+.trust-section{
+background:var(--light);
+}
+
+.trust-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
+}
+
+.trust-card{
+background:white;
+border-radius:22px;
+padding:26px;
+box-shadow:var(--shadow);
+border:1px solid #e3e8e1;
+text-align:center;
+}
+
+.trust-card h3{
+color:var(--green);
+font-size:24px;
+margin-bottom:8px;
+}
+
+.trust-card p{
+color:#5a665f;
+}
+
+.values-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:24px;
+}
+
+.value-card{
+background:white;
+border-radius:24px;
+overflow:hidden;
+box-shadow:var(--shadow);
+border:1px solid #e3e8e1;
+}
+
+.value-card img{
+width:100%;
+height:230px;
+object-fit:cover;
+}
+
+.value-content{
+padding:24px;
+}
+
+.value-content h3{
+color:var(--green);
+font-size:24px;
+margin-bottom:10px;
+}
+
+.value-content p{
+color:#5a665f;
+}
+
+.owner-section{
+background:var(--green);
+color:white;
+}
+
+.owner-section .section-title{
+color:white;
+}
+
+.owner-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.owner-grid p{
+font-size:20px;
+margin-bottom:18px;
+}
+
+.owner-list{
+display:grid;
+gap:12px;
+margin-top:22px;
+}
+
+.owner-list div{
+background:rgba(255,255,255,.12);
+border:1px solid rgba(255,255,255,.22);
+border-radius:16px;
+padding:16px;
+font-weight:800;
+}
+
+.owner-img{
+width:100%;
+height:480px;
+object-fit:cover;
+border-radius:28px;
+box-shadow:var(--shadow);
+}
+
+.area-section{
+background:var(--light);
+}
+
+.pills{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+}
+
+.pill{
+border:1px solid #d7ddd8;
+background:white;
+color:var(--green);
+padding:10px 14px;
+border-radius:999px;
+font-weight:800;
+font-size:14px;
+}
+
+.cta{
+background:var(--green);
+color:white;
+text-align:center;
+}
+
+.cta h2{
+font-size:clamp(42px,5vw,64px);
+line-height:1;
+margin-bottom:18px;
+}
+
+.cta p{
+font-size:21px;
+max-width:760px;
+margin:0 auto 28px;
+}
+
+footer{
+background:var(--dark);
+color:white;
+padding:70px 0;
+text-align:center;
+}
+
+footer img{
+max-width:420px;
+margin:0 auto 26px;
+}
+
+footer p{margin-bottom:10px;}
+
+@media(max-width:980px){
+.nav{
+flex-direction:column;
+gap:14px;
+}
+
+.nav-right{
+flex-direction:column;
+}
+
+.logo img{height:70px;}
+
+.story-grid,
+.owner-grid,
+.values-grid,
+.trust-grid{
+grid-template-columns:1fr;
+}
+
+.story-img,
+.owner-img{
+height:340px;
+}
+
+.hero{
+padding:70px 0;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container nav">
+
+<a href="index.html" class="logo">
+<img src="logo-simple.png" alt="A&O Tree Service">
+</a>
+
+<div class="nav-right">
+<a href="index.html" class="nav-link">Home</a>
+<a href="about.html" class="nav-link">About</a>
+<a href="services.html" class="nav-link">Services</a>
+<a href="gallery.html" class="nav-link">Gallery</a>
+<a href="testimonials.html" class="nav-link">Reviews</a>
+<a href="contact.html" class="nav-link">Contact</a>
+
+<div class="phone">
+334-332-3873
+<small>Call Anytime</small>
+</div>
+
+<a href="contact.html#contact-form" class="btn btn-primary">Request a Free Estimate</a>
+</div>
+
+</div>
+</header>
+
+<section class="hero">
+<div class="container">
+
+<h1>About A&O Tree Service</h1>
+
+<p>
+A&O Tree Service LLC is a locally owned, licensed and insured tree service company based in Notasulga, Alabama. The company specializes in dead and dangerous trees and brings over 20 years of experience to difficult tree work.
+</p>
+
+<a href="contact.html#contact-form" class="btn btn-secondary">Request a Free Estimate</a>
+<a href="tel:3343323873" class="btn btn-primary">Call 334-332-3873</a>
+
+</div>
+</section>
+
+<section>
+<div class="container story-grid">
+
+<div class="story-card">
+<h2>Local Tree Work Done With Experience</h2>
+
+<p>
+A&O Tree Service is owned by James Gates and serves homeowners, landowners, and businesses across East Central Alabama.
+</p>
+
+<p>
+The company focuses on professional tree removal, storm cleanup, dangerous tree work, stump grinding, brush removal, land clearing, and property cleanup.
+</p>
+
+<p>
+When a tree is dead, leaning, storm-damaged, or too close to a home, experience matters. A&O brings the equipment, planning, and care needed to handle difficult jobs safely.
+</p>
+</div>
+
+<img class="story-img" src="assets/BucketTruck.jpeg" alt="A&O Tree Service bucket truck work">
+
+</div>
+</section>
+
+<section class="trust-section">
+<div class="container">
+
+<h2 class="section-title">Built on Trust</h2>
+
+<p class="section-lead">
+Tree work can affect your home, yard, driveway, fence, utilities, and surrounding property. A&O approaches each job with safety, planning, and cleanup in mind.
+</p>
+
+<div class="trust-grid">
+
+<div class="trust-card">
+<h3>20+ Years Experience</h3>
+<p>Decades of tree service experience on jobs large and small.</p>
+</div>
+
+<div class="trust-card">
+<h3>Licensed & Insured</h3>
+<p>Professional service with protection for the work being done.</p>
+</div>
+
+<div class="trust-card">
+<h3>Locally Owned</h3>
+<p>Based in Notasulga and serving the surrounding Alabama communities.</p>
+</div>
+
+<div class="trust-card">
+<h3>Free Estimates</h3>
+<p>Clear estimates before the work begins.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<h2 class="section-title">What A&O Focuses On</h2>
+
+<p class="section-lead">
+Customers call A&O for tree work that requires experience, equipment, and attention to property protection.
+</p>
+
+<div class="values-grid">
+
+<div class="value-card">
+<img src="assets/TreeRemovalNearHouse.jpeg" alt="Tree removal near home">
+<div class="value-content">
+<h3>Dangerous Tree Removal</h3>
+<p>Removing dead, damaged, leaning, or unsafe trees near homes and structures.</p>
+</div>
+</div>
+
+<div class="value-card">
+<img src="assets/CraneLoweringLimb.jpeg" alt="Controlled tree removal">
+<div class="value-content">
+<h3>Property Protection</h3>
+<p>Careful limb lowering, proper equipment use, and planning around homes and yards.</p>
+</div>
+</div>
+
+<div class="value-card">
+<img src="assets/AfterTreeCutCleanUp.jpeg" alt="Tree service cleanup">
+<div class="value-content">
+<h3>Cleanup After the Job</h3>
+<p>Debris removal, brush cleanup, and leaving the property ready for use.</p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="owner-section">
+<div class="container owner-grid">
+
+<div>
+<h2 class="section-title">Owned by James Gates</h2>
+
+<p>
+A&O Tree Service is owned by James Gates and operates out of Notasulga, Alabama.
+</p>
+
+<p>
+The company has built its reputation around difficult tree work, practical communication, fair estimates, and getting the job done right.
+</p>
+
+<div class="owner-list">
+<div>Specializing in dead and dangerous trees</div>
+<div>Emergency tree service available</div>
+<div>Professional equipment for difficult jobs</div>
+<div>Serving East Central Alabama</div>
+</div>
+</div>
+
+<img class="owner-img" src="assets/AOTreeTruck2.jpeg" alt="A&O Tree Service truck">
+
+</div>
+</section>
+
+<section class="area-section">
+<div class="container">
+
+<h2 class="section-title">Serving East Central Alabama</h2>
+
+<p class="section-lead">
+A&O Tree Service is based in Notasulga and serves homeowners, landowners, and businesses across the surrounding communities.
+</p>
+
+<div class="pills">
+<div class="pill">Notasulga</div>
+<div class="pill">Auburn</div>
+<div class="pill">Opelika</div>
+<div class="pill">Tuskegee</div>
+<div class="pill">Tallassee</div>
+<div class="pill">Lake Martin</div>
+<div class="pill">Dadeville</div>
+<div class="pill">Montgomery</div>
+<div class="pill">East Central Alabama</div>
+</div>
+
+</div>
+</section>
+
+<section class="cta">
+<div class="container">
+
+<h2>Need a Tree Service You Can Trust?</h2>
+
+<p>
+Request a free estimate from A&O Tree Service. Licensed, insured, locally owned, and specializing in dead and dangerous trees.
+</p>
+
+<a href="contact.html#contact-form" class="btn btn-secondary">Request a Free Estimate</a>
+<a href="tel:3343323873" class="btn btn-primary">Call 334-332-3873</a>
+
+</div>
+</section>
+
+<footer>
+<div class="container">
+
+<img src="logo-oval.png" alt="A&O Tree Service">
+
+<h3>A&O Tree Service LLC</h3>
+
+<p>Specializing in dead and dangerous trees</p>
+
+<p>
+3960 Tallapoosa Street<br>
+Notasulga, AL 36866
+</p>
+
+<p>
+334-332-3873 • info@aotrees.com
+</p>
+
+<p>
+Licensed & Insured • Locally Owned • Free Estimates
+</p>
+
+<p>aotrees.com</p>
+
+</div>
+</footer>
+
+</body>
+</html>
