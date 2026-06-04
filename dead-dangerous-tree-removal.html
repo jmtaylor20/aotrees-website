@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dead & Dangerous Tree Removal | A&O Tree Service</title>
+
+<meta name="description" content="A&O Tree Service specializes in dead and dangerous tree removal across Notasulga, Auburn, Opelika, Tallassee, Lake Martin, Montgomery, and East Central Alabama. Licensed and insured with 20+ years of experience.">
+
+<style>
+:root{
+--green:#004b27;
+--green2:#0c6a3b;
+--lime:#95b81f;
+--dark:#062716;
+--light:#f5f7f4;
+--white:#ffffff;
+--shadow:0 14px 40px rgba(0,0,0,.12);
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:white;
+color:#173321;
+line-height:1.6;
+}
+
+.container{width:min(1180px,92%);margin:auto;}
+a{text-decoration:none;color:inherit;}
+img{max-width:100%;display:block;}
+
+header{
+background:rgba(255,255,255,.96);
+position:sticky;
+top:0;
+z-index:1000;
+border-bottom:1px solid #e3e7e2;
+}
+
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:14px 0;
+}
+
+.logo img{height:82px;}
+
+.nav-right{
+display:flex;
+align-items:center;
+gap:18px;
+}
+
+.nav-link{
+font-weight:800;
+color:var(--green);
+}
+
+.phone{
+font-weight:800;
+color:var(--green);
+font-size:17px;
+}
+
+.phone small{
+display:block;
+font-size:12px;
+font-weight:600;
+opacity:.7;
+margin-top:-2px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 24px;
+border-radius:999px;
+font-weight:800;
+transition:.25s;
+}
+
+.btn:hover{transform:translateY(-2px);}
+.btn-primary{background:var(--green);color:white;}
+.btn-secondary{background:var(--lime);color:#122211;}
+
+.hero{
+background:
+linear-gradient(rgba(0,65,35,.74),rgba(0,65,35,.74)),
+url("assets/ADeadAndDangerousTree.jpeg");
+background-size:cover;
+background-position:center;
+color:white;
+padding:95px 0;
+}
+
+.hero h1{
+font-size:clamp(54px,7vw,86px);
+line-height:.95;
+max-width:950px;
+margin-bottom:22px;
+}
+
+.hero p{
+font-size:22px;
+max-width:820px;
+margin-bottom:28px;
+}
+
+.hero-buttons{
+display:flex;
+gap:14px;
+flex-wrap:wrap;
+}
+
+section{padding:80px 0;}
+
+.section-title{
+font-size:clamp(40px,5vw,62px);
+line-height:1;
+color:var(--green);
+margin-bottom:16px;
+}
+
+.section-lead{
+font-size:20px;
+color:#5a665f;
+max-width:850px;
+margin-bottom:38px;
+}
+
+.split-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.split-img{
+width:100%;
+height:520px;
+object-fit:cover;
+border-radius:28px;
+box-shadow:var(--shadow);
+}
+
+.content-card{
+background:white;
+border-radius:28px;
+padding:34px;
+box-shadow:var(--shadow);
+border:1px solid #e3e8e1;
+}
+
+.content-card h2{
+color:var(--green);
+font-size:42px;
+line-height:1.05;
+margin-bottom:18px;
+}
+
+.content-card p{
+font-size:19px;
+color:#4f5d55;
+margin-bottom:18px;
+}
+
+.warning-section{
+background:var(--light);
+}
+
+.warning-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:24px;
+}
+
+.warning-card{
+background:white;
+border-radius:24px;
+padding:26px;
+box-shadow:var(--shadow);
+border:1px solid #e3e8e1;
+}
+
+.warning-card h3{
+color:var(--green);
+font-size:24px;
+margin-bottom:10px;
+}
+
+.warning-card p{
+color:#5a665f;
+}
+
+.process-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
+}
+
+.process-card{
+background:white;
+box-shadow:var(--shadow);
+border-radius:22px;
+padding:24px;
+border:1px solid #e3e8e1;
+}
+
+.process-number{
+width:44px;
+height:44px;
+border-radius:999px;
+background:var(--green);
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:900;
+font-size:20px;
+margin-bottom:16px;
+}
+
+.process-card h3{
+color:var(--green);
+margin-bottom:8px;
+font-size:21px;
+}
+
+.protection{
+background:var(--green);
+color:white;
+}
+
+.protection .section-title{
+color:white;
+}
+
+.protection-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:36px;
+align-items:center;
+}
+
+.protection p{
+font-size:20px;
+margin-bottom:20px;
+}
+
+.check-list{
+display:grid;
+gap:12px;
+margin-top:22px;
+}
+
+.check-item{
+background:rgba(255,255,255,.12);
+border:1px solid rgba(255,255,255,.22);
+border-radius:16px;
+padding:16px;
+font-weight:800;
+}
+
+.protection-img{
+width:100%;
+height:460px;
+object-fit:cover;
+border-radius:28px;
+box-shadow:var(--shadow);
+}
+
+.photo-strip{
+background:var(--light);
+}
+
+.photo-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:22px;
+}
+
+.photo-grid img{
+height:280px;
+width:100%;
+object-fit:cover;
+border-radius:22px;
+box-shadow:var(--shadow);
+}
+
+.area-section{
+background:white;
+}
+
+.pills{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+}
+
+.pill{
+border:1px solid #d7ddd8;
+background:var(--light);
+color:var(--green);
+padding:10px 14px;
+border-radius:999px;
+font-weight:800;
+font-size:14px;
+}
+
+.cta{
+background:var(--green);
+color:white;
+text-align:center;
+}
+
+.cta h2{
+font-size:clamp(42px,5vw,64px);
+line-height:1;
+margin-bottom:18px;
+}
+
+.cta p{
+font-size:21px;
+max-width:760px;
+margin:0 auto 28px;
+}
+
+footer{
+background:var(--dark);
+color:white;
+padding:70px 0;
+text-align:center;
+}
+
+footer img{
+max-width:420px;
+margin:0 auto 26px;
+}
+
+footer p{margin-bottom:10px;}
+
+@media(max-width:980px){
+.nav{
+flex-direction:column;
+gap:14px;
+}
+
+.nav-right{
+flex-direction:column;
+}
+
+.logo img{height:70px;}
+
+.split-grid,
+warning-grid,
+.warning-grid,
+.process-grid,
+.protection-grid,
+.photo-grid{
+grid-template-columns:1fr;
+}
+
+.split-img,
+.protection-img{
+height:340px;
+}
+
+.hero{
+padding:70px 0;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container nav">
+
+<a href="index.html" class="logo">
+<img src="logo-simple.png" alt="A&O Tree Service">
+</a>
+
+<div class="nav-right">
+<a href="index.html" class="nav-link">Home</a>
+<a href="about.html" class="nav-link">About</a>
+<a href="services.html" class="nav-link">Services</a>
+<a href="gallery.html" class="nav-link">Gallery</a>
+<a href="testimonials.html" class="nav-link">Reviews</a>
+<a href="contact.html" class="nav-link">Contact</a>
+
+<div class="phone">
+334-332-3873
+<small>Call Anytime</small>
+</div>
+
+<a href="contact.html#contact-form" class="btn btn-primary">Request a Free Estimate</a>
+</div>
+
+</div>
+</header>
+
+<section class="hero">
+<div class="container">
+
+<h1>Dead & Dangerous Tree Removal</h1>
+
+<p>
+A&O Tree Service specializes in removing dead, damaged, leaning, and hazardous trees near homes, driveways, roads, fences, utilities, and other property structures.
+</p>
+
+<div class="hero-buttons">
+<a href="contact.html#contact-form" class="btn btn-secondary">Request a Free Estimate</a>
+<a href="tel:3343323873" class="btn btn-primary">Call 334-332-3873</a>
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container split-grid">
+
+<div class="content-card">
+<h2>When a Tree Becomes a Risk</h2>
+
+<p>
+Dead and dangerous trees can fall without much warning. A tree may look stable from a distance while the inside is weak, hollow, diseased, storm-damaged, or cracked.
+</p>
+
+<p>
+If a tree is leaning toward your home, dropping large limbs, showing signs of decay, or sitting too close to structures, it needs a careful look from an experienced tree service.
+</p>
+
+<p>
+A&O Tree Service brings over 20 years of experience to difficult removals and specializes in dead and dangerous trees across East Central Alabama.
+</p>
+</div>
+
+<img class="split-img" src="assets/DangerousDeadTreeRemoval.jpeg" alt="Dangerous dead tree removal">
+
+</div>
+</section>
+
+<section class="warning-section">
+<div class="container">
+
+<h2 class="section-title">Signs You May Need Dangerous Tree Removal</h2>
+
+<p class="section-lead">
+Do not ignore a tree that looks unsafe. These warning signs can point to a tree that needs attention.
+</p>
+
+<div class="warning-grid">
+
+<div class="warning-card">
+<h3>Dead Limbs</h3>
+<p>Large dead limbs can break loose and damage roofs, vehicles, fences, or people below.</p>
+</div>
+
+<div class="warning-card">
+<h3>Leaning Trees</h3>
+<p>A tree leaning toward a home, driveway, road, or utility line can become a serious property risk.</p>
+</div>
+
+<div class="warning-card">
+<h3>Rot or Hollow Areas</h3>
+<p>Soft spots, cavities, fungus, and hollow trunks may show internal decay or weakened structure.</p>
+</div>
+
+<div class="warning-card">
+<h3>Storm Damage</h3>
+<p>High winds and heavy rain can split trunks, break limbs, and weaken root systems.</p>
+</div>
+
+<div class="warning-card">
+<h3>Cracks or Splits</h3>
+<p>Cracks in the trunk or large limbs may signal instability and increased risk of failure.</p>
+</div>
+
+<div class="warning-card">
+<h3>Too Close to Structures</h3>
+<p>Trees near homes, buildings, fences, power lines, and driveways require careful planning.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<h2 class="section-title">Our Removal Process</h2>
+
+<p class="section-lead">
+Dangerous tree work requires planning, equipment, and the right approach. A&O keeps the process clear from start to cleanup.
+</p>
+
+<div class="process-grid">
+
+<div class="process-card">
+<div class="process-number">1</div>
+<h3>Inspect the Tree</h3>
+<p>The tree, surrounding property, access points, and hazards are reviewed before work begins.</p>
+</div>
+
+<div class="process-card">
+<div class="process-number">2</div>
+<h3>Plan the Removal</h3>
+<p>The crew determines the safest removal approach based on equipment, location, and risk.</p>
+</div>
+
+<div class="process-card">
+<div class="process-number">3</div>
+<h3>Complete the Work</h3>
+<p>Tree sections and limbs are removed carefully using experience and proper equipment.</p>
+</div>
+
+<div class="process-card">
+<div class="process-number">4</div>
+<h3>Clean the Site</h3>
+<p>Brush, limbs, and debris are cleaned up according to the job plan.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="protection">
+<div class="container protection-grid">
+
+<div>
+<h2 class="section-title">Protecting Your Property Matters</h2>
+
+<p>
+The goal is not only to remove the tree. The goal is to remove the tree while protecting your home, yard, landscaping, driveway, fencing, and surrounding property.
+</p>
+
+<p>
+A&O uses planning, equipment, and careful work to reduce unnecessary damage during difficult removals.
+</p>
+
+<div class="check-list">
+<div class="check-item">Careful limb lowering near homes and structures</div>
+<div class="check-item">Attention to yards, driveways, fences, and landscaping</div>
+<div class="check-item">Equipment selection based on access and property conditions</div>
+<div class="check-item">Cleanup and hauling after removal</div>
+</div>
+</div>
+
+<img class="protection-img" src="assets/CraneLoweringLimb.jpeg" alt="Controlled limb lowering near property">
+
+</div>
+</section>
+
+<section class="photo-strip">
+<div class="container">
+
+<h2 class="section-title">Dangerous Tree Work in Action</h2>
+
+<p class="section-lead">
+A look at recent work involving large trees, hazardous limbs, and controlled removals.
+</p>
+
+<div class="photo-grid">
+<img src="assets/TreeRemovalNearHouse.jpeg" alt="Tree removal near house">
+<img src="assets/DangerousTree.jpeg" alt="Dangerous tree removal">
+<img src="assets/TreeTopCut.jpeg" alt="Tree top removal">
+</div>
+
+</div>
+</section>
+
+<section class="area-section">
+<div class="container">
+
+<h2 class="section-title">Dead & Dangerous Tree Removal Near You</h2>
+
+<p class="section-lead">
+A&O Tree Service is based in Notasulga and serves homeowners, landowners, and businesses across East Central Alabama.
+</p>
+
+<div class="pills">
+<div class="pill">Notasulga</div>
+<div class="pill">Auburn</div>
+<div class="pill">Opelika</div>
+<div class="pill">Tuskegee</div>
+<div class="pill">Tallassee</div>
+<div class="pill">Lake Martin</div>
+<div class="pill">Dadeville</div>
+<div class="pill">Montgomery</div>
+<div class="pill">East Central Alabama</div>
+</div>
+
+</div>
+</section>
+
+<section class="cta">
+<div class="container">
+
+<h2>Have a Dead or Dangerous Tree?</h2>
+
+<p>
+Do not wait for a hazardous tree to fall. Request a free estimate from A&O Tree Service or call today.
+</p>
+
+<a href="contact.html#contact-form" class="btn btn-secondary">Request a Free Estimate</a>
+<a href="tel:3343323873" class="btn btn-primary">Call 334-332-3873</a>
+
+</div>
+</section>
+
+<footer>
+<div class="container">
+
+<img src="logo-oval.png" alt="A&O Tree Service">
+
+<h3>A&O Tree Service LLC</h3>
+
+<p>Specializing in dead and dangerous trees</p>
+
+<p>
+3960 Tallapoosa Street<br>
+Notasulga, AL 36866
+</p>
+
+<p>
+334-332-3873 • info@aotrees.com
+</p>
+
+<p>
+Licensed & Insured • Locally Owned • Free Estimates
+</p>
+
+<p>aotrees.com</p>
+
+</div>
+</footer>
+
+</body>
+</html>
