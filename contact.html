@@ -110,6 +110,12 @@ max-width:780px;
 margin-bottom:28px;
 }
 
+.hero-buttons{
+display:flex;
+gap:14px;
+flex-wrap:wrap;
+}
+
 section{padding:80px 0;}
 
 .section-title{
@@ -240,8 +246,28 @@ gap:10px;
 font-weight:800;
 }
 
-.map-box{
+.service-area{
 background:var(--light);
+}
+
+.pills{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+}
+
+.pill{
+border:1px solid #d7ddd8;
+background:white;
+color:var(--green);
+padding:10px 14px;
+border-radius:999px;
+font-weight:800;
+font-size:14px;
+}
+
+.map-box{
+background:white;
 border-radius:28px;
 padding:34px;
 box-shadow:var(--shadow);
@@ -270,24 +296,29 @@ line-height:1.1;
 margin-bottom:12px;
 }
 
-.service-area{
-background:var(--light);
+.service-links{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
 }
 
-.pills{
-display:flex;
-gap:12px;
-flex-wrap:wrap;
-}
-
-.pill{
-border:1px solid #d7ddd8;
+.service-link-card{
 background:white;
+border-radius:20px;
+padding:22px;
+box-shadow:var(--shadow);
+border:1px solid #e3e8e1;
+}
+
+.service-link-card h3{
 color:var(--green);
-padding:10px 14px;
-border-radius:999px;
-font-weight:800;
-font-size:14px;
+font-size:22px;
+margin-bottom:8px;
+}
+
+.service-link-card p{
+color:#5a665f;
+margin-bottom:16px;
 }
 
 .cta{
@@ -306,6 +337,19 @@ margin-bottom:18px;
 font-size:21px;
 max-width:760px;
 margin:0 auto 28px;
+}
+
+.footer-links{
+display:flex;
+justify-content:center;
+gap:18px;
+flex-wrap:wrap;
+margin:24px 0;
+}
+
+.footer-links a{
+font-weight:800;
+color:#d7ecae;
 }
 
 footer{
@@ -334,7 +378,8 @@ flex-direction:column;
 
 .logo img{height:70px;}
 
-.contact-grid{
+.contact-grid,
+.service-links{
 grid-template-columns:1fr;
 }
 
@@ -356,6 +401,7 @@ padding:70px 0;
 
 <div class="nav-right">
 <a href="index.html" class="nav-link">Home</a>
+<a href="about.html" class="nav-link">About</a>
 <a href="services.html" class="nav-link">Services</a>
 <a href="gallery.html" class="nav-link">Gallery</a>
 <a href="testimonials.html" class="nav-link">Reviews</a>
@@ -363,7 +409,7 @@ padding:70px 0;
 
 <div class="phone">
 334-332-3873
-<small>Call Anytime</small>
+<small>Call or Text Anytime</small>
 </div>
 
 <a href="#contact-form" class="btn btn-primary">Request a Free Estimate</a>
@@ -378,11 +424,13 @@ padding:70px 0;
 <h1>Contact A&O Tree Service</h1>
 
 <p>
-Need tree removal, storm cleanup, land clearing, or help with a dead and dangerous tree? Request a free estimate or call A&O Tree Service today.
+Need tree removal, storm cleanup, land clearing, stump grinding, or help with a dead and dangerous tree? Request a free estimate or call A&O Tree Service today.
 </p>
 
+<div class="hero-buttons">
 <a href="#contact-form" class="btn btn-secondary">Request a Free Estimate</a>
 <a href="tel:3343323873" class="btn btn-primary">Call 334-332-3873</a>
+</div>
 
 </div>
 </section>
@@ -530,6 +578,58 @@ Notasulga, AL 36866
 </div>
 </section>
 
+<section class="service-area">
+<div class="container">
+
+<h2 class="section-title">Common Service Requests</h2>
+
+<p class="section-lead">
+Need a specific type of tree work? These pages explain A&O’s core services in more detail.
+</p>
+
+<div class="service-links">
+
+<div class="service-link-card">
+<h3>Dead & Dangerous Trees</h3>
+<p>Removal of hazardous trees near homes, driveways, fences, roads, and structures.</p>
+<a href="dead-dangerous-tree-removal.html" class="btn btn-primary">Learn More</a>
+</div>
+
+<div class="service-link-card">
+<h3>Emergency Tree Service</h3>
+<p>Help with fallen trees, storm damage, broken limbs, and urgent tree hazards.</p>
+<a href="emergency-tree-service.html" class="btn btn-primary">Learn More</a>
+</div>
+
+<div class="service-link-card">
+<h3>Tree Removal</h3>
+<p>Safe removal of dead, damaged, leaning, or unwanted trees.</p>
+<a href="tree-removal.html" class="btn btn-primary">Learn More</a>
+</div>
+
+<div class="service-link-card">
+<h3>Storm Cleanup</h3>
+<p>Cleanup after high winds, heavy rain, fallen limbs, and tree debris.</p>
+<a href="storm-cleanup.html" class="btn btn-primary">Learn More</a>
+</div>
+
+<div class="service-link-card">
+<h3>Land Clearing</h3>
+<p>Brush removal, small tree removal, skid steer work, and property cleanup.</p>
+<a href="land-clearing.html" class="btn btn-primary">Learn More</a>
+</div>
+
+<div class="service-link-card">
+<h3>Stump Grinding</h3>
+<p>Stump grinding, cleanup, hauling, and site preparation after tree removal.</p>
+<a href="stump-grinding.html" class="btn btn-primary">Learn More</a>
+</div>
+
+</div>
+
+</div>
+</section>
+
 <section class="cta">
 <div class="container">
 
@@ -562,6 +662,20 @@ Notasulga, AL 36866
 <p>
 334-332-3873 • info@aotrees.com
 </p>
+
+<div class="footer-links">
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="tree-removal.html">Tree Removal</a>
+<a href="dead-dangerous-tree-removal.html">Dangerous Trees</a>
+<a href="emergency-tree-service.html">Emergency Service</a>
+<a href="storm-cleanup.html">Storm Cleanup</a>
+<a href="land-clearing.html">Land Clearing</a>
+<a href="stump-grinding.html">Stump Grinding</a>
+<a href="gallery.html">Gallery</a>
+<a href="testimonials.html">Reviews</a>
+<a href="contact.html">Contact</a>
+</div>
 
 <p>
 Licensed & Insured • Locally Owned • Free Estimates
