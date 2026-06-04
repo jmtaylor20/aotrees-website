@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>A&O Tree Service | Notasulga, Alabama</title>
 
 <meta name="description" content="A&O Tree Service specializes in dead and dangerous trees. Licensed and insured tree service serving Auburn, Opelika, Lake Martin, Tallassee, Montgomery and East Central Alabama.">
@@ -90,7 +91,7 @@ transition:.25s;
 
 .hero{
 background:
-linear-gradient(rgba(0,65,35,.58),rgba(0,65,35,.58)),
+linear-gradient(rgba(0,65,35,.62),rgba(0,65,35,.62)),
 url("hero-tree-service.jpeg");
 background-size:cover;
 background-position:center;
@@ -244,6 +245,7 @@ background:white;
 border-radius:24px;
 overflow:hidden;
 box-shadow:var(--shadow);
+border:1px solid #e3e8e1;
 }
 
 .service-card img{
@@ -258,6 +260,11 @@ object-fit:cover;
 color:var(--green);
 margin-bottom:10px;
 font-size:24px;
+}
+
+.service-content p{
+margin-bottom:18px;
+color:#5a665f;
 }
 
 .gallery{background:var(--light);}
@@ -297,6 +304,47 @@ flex-wrap:wrap;
 
 .stars{color:#d8a900;}
 
+.property-section{
+background:var(--light);
+}
+
+.property-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+
+.property-card{
+background:white;
+border-radius:22px;
+padding:24px;
+box-shadow:var(--shadow);
+border:1px solid #e3e8e1;
+}
+
+.property-card h3{
+color:var(--green);
+font-size:22px;
+margin-bottom:10px;
+}
+
+.property-card p{
+color:#5a665f;
+}
+
+.footer-links{
+display:flex;
+justify-content:center;
+gap:18px;
+flex-wrap:wrap;
+margin:24px 0;
+}
+
+.footer-links a{
+font-weight:800;
+color:#d7ecae;
+}
+
 .emergency-banner{
 background:linear-gradient(90deg,var(--green),var(--green2));
 color:white;
@@ -306,11 +354,17 @@ font-size:22px;
 font-weight:800;
 }
 
+.emergency-banner a{
+color:#d7ecae;
+}
+
 @media (max-width:980px){
 .hero-grid,
 .services-grid,
+gallery-grid,
 .gallery-grid,
-.trust-grid{
+.trust-grid,
+.property-grid{
 grid-template-columns:1fr;
 }
 
@@ -342,16 +396,19 @@ section{padding:60px 0;}
 </a>
 
 <div class="nav-right">
+<a href="index.html" class="nav-link">Home</a>
+<a href="about.html" class="nav-link">About</a>
+<a href="services.html" class="nav-link">Services</a>
+<a href="gallery.html" class="nav-link">Gallery</a>
 <a href="testimonials.html" class="nav-link">Reviews</a>
+<a href="contact.html" class="nav-link">Contact</a>
 
-<a href="gallery.html" class="nav-link">Gallery</a>  
-  
 <div class="phone">
 334-332-3873
 <small>Call Anytime</small>
 </div>
 
-<a href="#estimate" class="btn btn-primary">Request a Free Estimate</a>
+<a href="contact.html#contact-form" class="btn btn-primary">Request a Free Estimate</a>
 </div>
 
 </div>
@@ -370,13 +427,13 @@ Dangerous Trees
 </h1>
 
 <p>
-A&O Tree Service provides professional tree removal, storm cleanup, limb removal, stump grinding, and emergency tree service across East Central Alabama.
+A&O Tree Service provides professional tree removal, storm cleanup, limb removal, stump grinding, land clearing, and emergency tree service across East Central Alabama.
 </p>
 
 <div class="hero-buttons">
-<a href="#estimate" class="btn btn-secondary">Request a Free Estimate</a>
+<a href="contact.html#contact-form" class="btn btn-secondary">Request a Free Estimate</a>
 <a href="tel:3343323873" class="btn btn-primary">Call Now</a>
-<a href="testimonials.html" class="btn btn-primary">Read Reviews</a>
+<a href="dead-dangerous-tree-removal.html" class="btn btn-primary">Dangerous Tree Help</a>
 </div>
 
 <div class="pills">
@@ -444,7 +501,26 @@ Professional tree work for homeowners, landowners, and businesses across East Ce
 <img src="truck-tree-service.jpeg" alt="A&O Tree Service truck and tree removal equipment">
 <div class="service-content">
 <h3>Tree Removal</h3>
-<p>Safe removal of dead, hazardous, or unwanted trees.</p>
+<p>Safe removal of dead, hazardous, leaning, damaged, or unwanted trees.</p>
+<a href="tree-removal.html" class="btn btn-primary">Tree Removal</a>
+</div>
+</div>
+
+<div class="service-card">
+<img src="assets/ADeadAndDangerousTree.jpeg" alt="Dead and dangerous tree removal">
+<div class="service-content">
+<h3>Dead & Dangerous Trees</h3>
+<p>Specialized removal of unsafe trees near homes, driveways, fences, and structures.</p>
+<a href="dead-dangerous-tree-removal.html" class="btn btn-primary">Dangerous Tree Removal</a>
+</div>
+</div>
+
+<div class="service-card">
+<img src="assets/FallenTreeRemoval.jpeg" alt="Emergency fallen tree removal">
+<div class="service-content">
+<h3>Emergency Tree Service</h3>
+<p>Help for fallen trees, storm damage, broken limbs, blocked driveways, and urgent hazards.</p>
+<a href="emergency-tree-service.html" class="btn btn-primary">Emergency Service</a>
 </div>
 </div>
 
@@ -452,15 +528,26 @@ Professional tree work for homeowners, landowners, and businesses across East Ce
 <img src="storm-cleanup.jpeg" alt="Storm cleanup and tree debris removal">
 <div class="service-content">
 <h3>Storm Cleanup</h3>
-<p>Fast response after storms and fallen trees.</p>
+<p>Fast cleanup after high winds, heavy rain, fallen trees, and storm debris.</p>
+<a href="storm-cleanup.html" class="btn btn-primary">Storm Cleanup</a>
+</div>
+</div>
+
+<div class="service-card">
+<img src="assets/LandClearing.jpeg" alt="Land clearing and brush removal">
+<div class="service-content">
+<h3>Land Clearing</h3>
+<p>Brush removal, small tree removal, skid steer work, and site preparation.</p>
+<a href="land-clearing.html" class="btn btn-primary">Land Clearing</a>
 </div>
 </div>
 
 <div class="service-card">
 <img src="cleanup1.jpg" alt="Cleanup and hauling after tree removal">
 <div class="service-content">
-<h3>Cleanup & Hauling</h3>
-<p>Debris removal and complete site cleanup.</p>
+<h3>Stump Grinding & Cleanup</h3>
+<p>Stump grinding, cleanup, hauling, and property preparation after tree removal.</p>
+<a href="stump-grinding.html" class="btn btn-primary">Stump Grinding</a>
 </div>
 </div>
 
@@ -481,6 +568,51 @@ A look at recent A&O Tree Service projects and equipment in action.
 <img src="bucket-truck.jpeg" alt="Bucket truck tree service work">
 <img src="hero-tree-service.jpeg" alt="Large tree removal near house">
 <img src="cleanup1.jpg" alt="Tree removal cleanup">
+</div>
+
+<div style="margin-top:30px;">
+<a href="gallery.html" class="btn btn-primary">View Full Gallery</a>
+</div>
+
+</div>
+</section>
+
+<section class="property-section">
+<div class="container">
+
+<h2 class="section-title">Property Protection & Site Services</h2>
+
+<p class="section-lead">
+A&O focuses on more than cutting trees. The crew also pays attention to property protection, cleanup, drainage concerns, and future site use.
+</p>
+
+<div class="property-grid">
+
+<div class="property-card">
+<h3>Safety & Property Protection</h3>
+<p>Careful planning around homes, fences, driveways, utilities, and landscaping.</p>
+</div>
+
+<div class="property-card">
+<h3>Drainage & Erosion Awareness</h3>
+<p>Attention to water flow, washouts, access points, and property conditions during cleanup.</p>
+</div>
+
+<div class="property-card">
+<h3>Plant & Tree Health</h3>
+<p>Removal of damaged, diseased, or hazardous trees while protecting healthy growth when possible.</p>
+</div>
+
+<div class="property-card">
+<h3>Site Preparation</h3>
+<p>Brush cleanup, debris removal, skid steer support, and preparation for future property use.</p>
+</div>
+
+</div>
+
+<div style="margin-top:30px;">
+<a href="services.html" class="btn btn-primary">Explore All Services</a>
+<a href="land-clearing.html" class="btn btn-secondary">Land Clearing & Site Work</a>
 </div>
 
 </div>
@@ -524,6 +656,11 @@ A&O Tree Service is owned by James Gates and based out of Notasulga, Alabama. Th
 <div class="pill" style="margin-bottom:12px;">Experienced operators and proper equipment</div>
 <div class="pill" style="margin-bottom:12px;">Clear communication and honest estimates</div>
 <div class="pill">Emergency tree service available</div>
+
+<div style="margin-top:28px;">
+<a href="about.html" class="btn btn-secondary">About A&O</a>
+<a href="testimonials.html" class="btn btn-primary">Read Reviews</a>
+</div>
 </div>
 
 <div>
@@ -553,11 +690,15 @@ Serving homeowners and property owners across East Central Alabama.
 <div class="pill" style="color:var(--green);border-color:#d7ddd8;">Montgomery</div>
 </div>
 
+<div style="margin-top:30px;">
+<a href="contact.html" class="btn btn-primary">Contact A&O Tree Service</a>
+</div>
+
 </div>
 </section>
 
 <div class="emergency-banner">
-Emergency Tree Service Available • Call 334-332-3873
+Emergency Tree Service Available • <a href="tel:3343323873">Call 334-332-3873</a>
 </div>
 
 <footer style="background:var(--dark);color:white;padding:70px 0;">
@@ -577,6 +718,20 @@ Notasulga, AL 36866
 <p style="margin-bottom:8px;">
 334-332-3873 • info@aotrees.com
 </p>
+
+<div class="footer-links">
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="tree-removal.html">Tree Removal</a>
+<a href="dead-dangerous-tree-removal.html">Dangerous Trees</a>
+<a href="emergency-tree-service.html">Emergency Service</a>
+<a href="storm-cleanup.html">Storm Cleanup</a>
+<a href="land-clearing.html">Land Clearing</a>
+<a href="stump-grinding.html">Stump Grinding</a>
+<a href="gallery.html">Gallery</a>
+<a href="testimonials.html">Reviews</a>
+<a href="contact.html">Contact</a>
+</div>
 
 <p style="margin-bottom:8px;">
 Licensed & Insured • Locally Owned • Free Estimates • Emergency Services Available
