@@ -20,6 +20,7 @@
 }
 
 *{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
 
 body{
 font-family:Arial,Helvetica,sans-serif;
@@ -60,9 +61,7 @@ align-items:center;
 gap:18px;
 }
 
-.nav-links{
-display:flex;
-gap:18px;
+.nav-link{
 font-weight:800;
 color:var(--green);
 }
@@ -122,6 +121,13 @@ margin-bottom:22px;
 font-size:22px;
 max-width:760px;
 margin-bottom:28px;
+}
+
+.hero-buttons{
+display:flex;
+gap:14px;
+flex-wrap:wrap;
+margin-top:28px;
 }
 
 .rating-box{
@@ -259,6 +265,19 @@ max-width:760px;
 margin:0 auto 28px;
 }
 
+.footer-links{
+display:flex;
+justify-content:center;
+gap:18px;
+flex-wrap:wrap;
+margin:24px 0;
+}
+
+.footer-links a{
+font-weight:800;
+color:#d7ecae;
+}
+
 footer{
 background:var(--dark);
 color:white;
@@ -283,11 +302,6 @@ gap:14px;
 
 .nav-right{
 flex-direction:column;
-}
-
-.nav-links{
-flex-wrap:wrap;
-justify-content:center;
 }
 
 .logo img{
@@ -319,20 +333,21 @@ padding:70px 0;
 </a>
 
 <div class="nav-right">
-
-<div class="nav-links">
-<a href="index.html">Home</a>
-<a href="testimonials.html">Reviews</a>
-</div>
+<a href="index.html" class="nav-link">Home</a>
+<a href="about.html" class="nav-link">About</a>
+<a href="services.html" class="nav-link">Services</a>
+<a href="gallery.html" class="nav-link">Gallery</a>
+<a href="testimonials.html" class="nav-link">Reviews</a>
+<a href="contact.html" class="nav-link">Contact</a>
 
 <div class="phone">
 334-332-3873
-<small>Call Anytime</small>
+<small>Call or Text Anytime</small>
 </div>
 
-<a href="index.html#estimate" class="btn btn-primary">Request a Free Estimate</a>
-
+<a href="contact.html#contact-form" class="btn btn-primary">Request a Free Estimate</a>
 </div>
+
 </div>
 </header>
 
@@ -351,9 +366,10 @@ See why homeowners and property owners across East Central Alabama trust A&O Tre
 <span>43 Google Reviews</span>
 </div>
 
-<div style="margin-top:28px;display:flex;gap:14px;flex-wrap:wrap;">
+<div class="hero-buttons">
 <a href="#" class="btn btn-secondary">Read Google Reviews</a>
 <a href="#" class="btn btn-primary">Write a Review</a>
+<a href="contact.html#contact-form" class="btn btn-primary">Request a Free Estimate</a>
 </div>
 
 </div>
@@ -387,6 +403,10 @@ Cole came out and answered all my questions and had me scheduled within days of 
 The crew showed up on time, and were so friendly to the boys, who were fascinated by the equipment and the tree falling down.
 Absolutely hands down the tree service to use!!”
 </p>
+
+<div style="margin-top:18px;">
+<a href="tree-removal.html" class="btn btn-primary">Tree Removal Services</a>
+</div>
 </div>
 
 <div class="review-card">
@@ -417,6 +437,10 @@ they know what they’re doing!! Thanks, A&O!!”
 <strong>A&O Tree Service LLC response:</strong>
 <p>Thank you for trusting us to perform and complete your job. It was a pleasure to work for you. We look forward to working with you again for any tree needs you may have in the future.</p>
 </div>
+
+<div style="margin-top:18px;">
+<a href="dead-dangerous-tree-removal.html" class="btn btn-primary">Dead & Dangerous Tree Removal</a>
+</div>
 </div>
 
 <div class="review-card">
@@ -445,6 +469,10 @@ that down 100%. Thanks again from a 2nd time customer!”
 <strong>A&O Tree Service LLC response:</strong>
 <p>We appreciate doing business with you! It was a pleasure to work for you!</p>
 </div>
+
+<div style="margin-top:18px;">
+<a href="gallery.html" class="btn btn-primary">View Recent Work</a>
+</div>
 </div>
 
 <div class="review-card">
@@ -468,6 +496,10 @@ and I highly recommend them! Huge thanks to Cole and the entire A&O crew!”
 <strong>A&O Tree Service LLC response:</strong>
 <p>We appreciate your business. It was a pleasure to work for you.</p>
 </div>
+
+<div style="margin-top:18px;">
+<a href="stump-grinding.html" class="btn btn-primary">Stump Grinding & Cleanup</a>
+</div>
 </div>
 
 <div class="review-card">
@@ -487,6 +519,10 @@ They took three massive trees near my house.”
 <div class="owner-response">
 <strong>A&O Tree Service LLC response:</strong>
 <p>We appreciate doing business with you! It was a pleasure to work for you!</p>
+</div>
+
+<div style="margin-top:18px;">
+<a href="tree-removal.html" class="btn btn-primary">Tree Removal Services</a>
 </div>
 </div>
 
@@ -524,7 +560,7 @@ Across customer reviews, the same themes show up again and again.
 Request a free estimate from A&O Tree Service. Licensed, insured, locally owned, and specializing in dead and dangerous trees.
 </p>
 
-<a href="index.html#estimate" class="btn btn-secondary">Request a Free Estimate</a>
+<a href="contact.html#contact-form" class="btn btn-secondary">Request a Free Estimate</a>
 <a href="tel:3343323873" class="btn btn-primary">Call 334-332-3873</a>
 
 </div>
@@ -547,6 +583,20 @@ Notasulga, AL 36866
 <p>
 334-332-3873 • info@aotrees.com
 </p>
+
+<div class="footer-links">
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="tree-removal.html">Tree Removal</a>
+<a href="dead-dangerous-tree-removal.html">Dangerous Trees</a>
+<a href="emergency-tree-service.html">Emergency Service</a>
+<a href="storm-cleanup.html">Storm Cleanup</a>
+<a href="land-clearing.html">Land Clearing</a>
+<a href="stump-grinding.html">Stump Grinding</a>
+<a href="gallery.html">Gallery</a>
+<a href="testimonials.html">Reviews</a>
+<a href="contact.html">Contact</a>
+</div>
 
 <p>
 Licensed & Insured • Locally Owned • Free Estimates
