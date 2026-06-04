@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Testimonials | A&O Tree Service</title>
+<title>Customer Reviews | A&O Tree Service</title>
 
-<meta name="description" content="Read customer testimonials for A&O Tree Service. See recent work photos and examples of tree removal, storm cleanup, and dangerous tree service across East Central Alabama.">
+<meta name="description" content="Read customer reviews for A&O Tree Service LLC, rated 4.8 stars on Google with 43 reviews. Serving Notasulga, Auburn, Opelika, Tallassee, Montgomery, and East Central Alabama.">
 
 <style>
 :root{
@@ -103,16 +103,16 @@ color:#122211;
 
 .hero{
 background:
-linear-gradient(rgba(0,65,35,.72),rgba(0,65,35,.72)),
+linear-gradient(rgba(0,65,35,.76),rgba(0,65,35,.76)),
 url("assets/TreeRemovalNearHouse.jpeg");
 background-size:cover;
 background-position:center;
 color:white;
-padding:100px 0;
+padding:95px 0;
 }
 
 .hero h1{
-font-size:clamp(52px,7vw,86px);
+font-size:clamp(54px,7vw,86px);
 line-height:.95;
 max-width:850px;
 margin-bottom:22px;
@@ -120,8 +120,26 @@ margin-bottom:22px;
 
 .hero p{
 font-size:22px;
-max-width:720px;
+max-width:760px;
 margin-bottom:28px;
+}
+
+.rating-box{
+display:inline-flex;
+align-items:center;
+gap:14px;
+background:white;
+color:var(--green);
+padding:16px 22px;
+border-radius:18px;
+font-weight:900;
+box-shadow:var(--shadow);
+flex-wrap:wrap;
+}
+
+.stars{
+color:#d8a900;
+letter-spacing:1px;
 }
 
 section{
@@ -138,116 +156,104 @@ margin-bottom:16px;
 .section-lead{
 font-size:20px;
 color:#5a665f;
-max-width:760px;
+max-width:800px;
 margin-bottom:38px;
 }
 
-.testimonial-grid{
+.review-grid{
 display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:24px;
+grid-template-columns:1fr;
+gap:26px;
 }
 
-.testimonial-card{
+.review-card{
 background:white;
 box-shadow:var(--shadow);
-border-radius:24px;
-padding:28px;
+border-radius:26px;
+padding:30px;
 border:1px solid #e4e9e2;
 }
 
-.stars{
-color:#d8a900;
-font-size:22px;
+.review-top{
+display:flex;
+justify-content:space-between;
+gap:18px;
+align-items:flex-start;
 margin-bottom:16px;
 }
 
-.testimonial-card p{
-font-size:18px;
-margin-bottom:20px;
-}
-
-.testimonial-card strong{
+.review-name{
+font-size:22px;
+font-weight:900;
 color:var(--green);
 }
 
-.album-section{
+.review-meta{
+color:#65716a;
+font-weight:700;
+font-size:14px;
+}
+
+.review-text{
+font-size:18px;
+margin:14px 0 20px;
+}
+
+.service-tag{
+display:inline-block;
+background:var(--light);
+padding:12px 16px;
+border-radius:14px;
+font-weight:800;
+color:var(--green);
+margin-bottom:16px;
+}
+
+.owner-response{
+border-left:5px solid var(--green);
+background:#f5f7f4;
+padding:18px;
+border-radius:14px;
+margin-top:18px;
+}
+
+.owner-response strong{
+color:var(--green);
+}
+
+.mentions{
 background:var(--light);
 }
 
-.carousel{
-position:relative;
-overflow:hidden;
-border-radius:30px;
+.mentions-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+}
+
+.mention-card{
+background:white;
+border-radius:20px;
 box-shadow:var(--shadow);
-background:#000;
+padding:24px;
+font-weight:900;
+color:var(--green);
+text-align:center;
 }
 
-.slide{
-display:none;
-height:620px;
-position:relative;
-}
-
-.slide.active{
-display:block;
-}
-
-.slide img{
-width:100%;
-height:100%;
-object-fit:cover;
-}
-
-.caption{
-position:absolute;
-bottom:0;
-left:0;
-right:0;
-background:linear-gradient(transparent,rgba(0,0,0,.75));
-color:white;
-padding:80px 34px 30px;
-}
-
-.caption h3{
-font-size:34px;
-margin-bottom:8px;
-}
-
-.caption p{
-font-size:18px;
-}
-
-.carousel-buttons{
-display:flex;
-justify-content:center;
-gap:14px;
-margin-top:24px;
-}
-
-.carousel-buttons button{
-border:none;
-background:var(--green);
-color:white;
-font-weight:800;
-border-radius:999px;
-padding:12px 22px;
-cursor:pointer;
-}
-
-.review-cta{
+.cta{
 background:var(--green);
 color:white;
 text-align:center;
 }
 
-.review-cta h2{
-font-size:clamp(40px,5vw,64px);
+.cta h2{
+font-size:clamp(42px,5vw,64px);
 line-height:1;
 margin-bottom:18px;
 }
 
-.review-cta p{
+.cta p{
 font-size:21px;
 max-width:760px;
 margin:0 auto 28px;
@@ -265,6 +271,10 @@ max-width:420px;
 margin:0 auto 26px;
 }
 
+footer p{
+margin-bottom:10px;
+}
+
 @media(max-width:900px){
 .nav{
 flex-direction:column;
@@ -280,16 +290,20 @@ flex-wrap:wrap;
 justify-content:center;
 }
 
-.testimonial-grid{
+.logo img{
+height:70px;
+}
+
+.mentions-grid{
 grid-template-columns:1fr;
 }
 
-.slide{
-height:420px;
+.review-top{
+flex-direction:column;
 }
 
-.logo img{
-height:70px;
+.hero{
+padding:70px 0;
 }
 }
 </style>
@@ -305,9 +319,10 @@ height:70px;
 </a>
 
 <div class="nav-right">
+
 <div class="nav-links">
 <a href="index.html">Home</a>
-<a href="testimonials.html">Testimonials</a>
+<a href="testimonials.html">Reviews</a>
 </div>
 
 <div class="phone">
@@ -316,113 +331,202 @@ height:70px;
 </div>
 
 <a href="index.html#estimate" class="btn btn-primary">Request a Free Estimate</a>
-</div>
 
+</div>
 </div>
 </header>
 
 <section class="hero">
 <div class="container">
-<h1>Customer Stories & Recent Work</h1>
-<p>See what customers say about A&O Tree Service and view recent tree removal, storm cleanup, and equipment work across East Central Alabama.</p>
-<a href="index.html#estimate" class="btn btn-secondary">Request a Free Estimate</a>
+
+<h1>Customer Reviews</h1>
+
+<p>
+See why homeowners and property owners across East Central Alabama trust A&O Tree Service for tree removal, storm cleanup, stump grinding, and dangerous tree work.
+</p>
+
+<div class="rating-box">
+<span style="font-size:34px;">4.8</span>
+<span class="stars">★★★★★</span>
+<span>43 Google Reviews</span>
+</div>
+
+<div style="margin-top:28px;display:flex;gap:14px;flex-wrap:wrap;">
+<a href="#" class="btn btn-secondary">Read Google Reviews</a>
+<a href="#" class="btn btn-primary">Write a Review</a>
+</div>
+
 </div>
 </section>
 
 <section>
 <div class="container">
 
-<h2 class="section-title">What Customers Are Saying</h2>
-<p class="section-lead">We’ll replace these with real Google reviews and customer testimonials once the owner sends the final review link and preferred testimonials.</p>
+<h2 class="section-title">Featured Customer Reviews</h2>
 
-<div class="testimonial-grid">
+<p class="section-lead">
+These customer reviews highlight the work A&O Tree Service is known for: fair pricing, quick communication, careful work, property cleanup, and professional tree removal.
+</p>
 
-<div class="testimonial-card">
+<div class="review-grid">
+
+<div class="review-card">
+<div class="review-top">
+<div>
+<div class="review-name">Hillary Pruitt</div>
+<div class="review-meta">Local Guide • 5-star Google review • 2 months ago</div>
+</div>
 <div class="stars">★★★★★</div>
-<p>“A&O Tree Service handled a dangerous tree near our home with care and professionalism. The crew worked safely and cleaned up the property when the job was done.”</p>
-<strong>Homeowner Review</strong>
 </div>
 
-<div class="testimonial-card">
-<div class="stars">★★★★★</div>
-<p>“They showed up with the right equipment and made a tough tree removal look controlled from start to finish. Great communication and a fair estimate.”</p>
-<strong>Tree Removal Customer</strong>
+<div class="service-tag">Service: Tree removal</div>
+
+<p class="review-text">
+“A&O is amazing! I contacted them via their website and they were in touch the same day. Everyone I spoke to was so kind and professional.
+Cole came out and answered all my questions and had me scheduled within days of the initial conversation.
+The crew showed up on time, and were so friendly to the boys, who were fascinated by the equipment and the tree falling down.
+Absolutely hands down the tree service to use!!”
+</p>
 </div>
 
-<div class="testimonial-card">
+<div class="review-card">
+<div class="review-top">
+<div>
+<div class="review-name">Wilton’s Catering</div>
+<div class="review-meta">5-star Google review • 4 months ago</div>
+</div>
 <div class="stars">★★★★★</div>
-<p>“After storm damage, they responded quickly and helped clear the fallen limbs and debris. I would recommend them for emergency tree work.”</p>
-<strong>Storm Cleanup Customer</strong>
+</div>
+
+<p class="review-text">
+“We had a gigantic 100 year old, at least, water oak about 3 feet from our house right next to power lines.
+It kept dropping dead limbs on our roof, so we knew we had to take it down. The A&O guys arrived promptly
+as they said they would, worked with an entire team, a couple of cranes and some dedicated chainsaw operators
+and took the entire tree down within 5 hours. Their guys cleaned everything up and left a big stump on the side
+of our house. They returned 3 days later and ground that huge stump up and smoothed out our yard.
+Without looking closely, you would never guess a tree had even been there.”
+</p>
+
+<p class="review-text">
+“These guys are true professionals who really know what they’re doing. I highly recommend them if you need
+some serious tree work done on your property. Friendly, punctual, affordable, and most importantly,
+they know what they’re doing!! Thanks, A&O!!”
+</p>
+
+<div class="owner-response">
+<strong>A&O Tree Service LLC response:</strong>
+<p>Thank you for trusting us to perform and complete your job. It was a pleasure to work for you. We look forward to working with you again for any tree needs you may have in the future.</p>
+</div>
+</div>
+
+<div class="review-card">
+<div class="review-top">
+<div>
+<div class="review-name">Streetninja 0909</div>
+<div class="review-meta">Local Guide • 5-star Google review • Updated 10 months ago</div>
+</div>
+<div class="stars">★★★★★</div>
+</div>
+
+<p class="review-text">
+“What can I say? Perfect is a good description. They took 6 trees out with extreme precision and cleaned up stuff
+I even left from the small trees I took out. Reasonable prices. Very skilled crew. Look no further — they are old school
+in business style. I had high expectations for them and they exceeded my expectations. Thank you!!”
+</p>
+
+<p class="review-text">
+“Update 6.25.25 - another 3 trees gone for a very reasonable price. Perfectly cleaned up. And all through a 4' gate
+with 0% damage at all. Will be calling again if anything comes up! This company is punctual, super efficient,
+has decades of experience and the people are all-around nice people. Attention to detail is important and they have
+that down 100%. Thanks again from a 2nd time customer!”
+</p>
+
+<div class="owner-response">
+<strong>A&O Tree Service LLC response:</strong>
+<p>We appreciate doing business with you! It was a pleasure to work for you!</p>
+</div>
+</div>
+
+<div class="review-card">
+<div class="review-top">
+<div>
+<div class="review-name">Brittany Wheatley</div>
+<div class="review-meta">5-star Google review • 7 months ago</div>
+</div>
+<div class="stars">★★★★★</div>
+</div>
+
+<div class="service-tag">Services: Stump grinding, stump removal, tree trimming & pruning, tree removal</div>
+
+<p class="review-text">
+“A&O came out and took care of a massive job—removing trees, stumps, and even doing some detailed pruning.
+They were professional, fast, and efficient from start to finish. The end results are truly incredible,
+and I highly recommend them! Huge thanks to Cole and the entire A&O crew!”
+</p>
+
+<div class="owner-response">
+<strong>A&O Tree Service LLC response:</strong>
+<p>We appreciate your business. It was a pleasure to work for you.</p>
+</div>
+</div>
+
+<div class="review-card">
+<div class="review-top">
+<div>
+<div class="review-name">Patrick Klesius</div>
+<div class="review-meta">Local Guide • 5-star Google review • 1 year ago</div>
+</div>
+<div class="stars">★★★★★</div>
+</div>
+
+<p class="review-text">
+“Fair pricing, easy scheduling, and they were kind enough to allow me to adjust the scope.
+They took three massive trees near my house.”
+</p>
+
+<div class="owner-response">
+<strong>A&O Tree Service LLC response:</strong>
+<p>We appreciate doing business with you! It was a pleasure to work for you!</p>
+</div>
 </div>
 
 </div>
 </div>
 </section>
 
-<section class="album-section">
+<section class="mentions">
 <div class="container">
 
-<h2 class="section-title">Photo Album</h2>
-<p class="section-lead">A revolving look at recent A&O Tree Service jobs, equipment, cleanup, and dangerous tree removals.</p>
+<h2 class="section-title">What Customers Mention Most</h2>
 
-<div class="carousel">
+<p class="section-lead">
+Across customer reviews, the same themes show up again and again.
+</p>
 
-<div class="slide active">
-<img src="assets/TreeRemovalNearHouse.jpeg" alt="Tree removal near house">
-<div class="caption">
-<h3>Tree Removal Near a Home</h3>
-<p>Careful work around homes, roofs, and nearby structures.</p>
-</div>
-</div>
-
-<div class="slide">
-<img src="assets/CraneLoweringLimb.jpeg" alt="Crane lowering limb">
-<div class="caption">
-<h3>Controlled Limb Removal</h3>
-<p>Large limbs lowered carefully to protect property.</p>
-</div>
-</div>
-
-<div class="slide">
-<img src="assets/BucketTruck.jpeg" alt="Bucket truck tree service">
-<div class="caption">
-<h3>Bucket Truck Work</h3>
-<p>Proper equipment for high limbs and hazardous tree work.</p>
-</div>
-</div>
-
-<div class="slide">
-<img src="assets/SkidSteer.jpeg" alt="Skid steer cleanup">
-<div class="caption">
-<h3>Cleanup & Site Work</h3>
-<p>Brush, limbs, and debris removed after the job.</p>
-</div>
-</div>
-
-<div class="slide">
-<img src="assets/DangerousDeadTreeRemoval.jpeg" alt="Dangerous dead tree removal">
-<div class="caption">
-<h3>Dead & Dangerous Trees</h3>
-<p>Specialized removal for hazardous trees and unsafe limbs.</p>
-</div>
-</div>
-
-</div>
-
-<div class="carousel-buttons">
-<button onclick="prevSlide()">Previous</button>
-<button onclick="nextSlide()">Next</button>
+<div class="mentions-grid">
+<div class="mention-card">Fair Pricing</div>
+<div class="mention-card">Fast Scheduling</div>
+<div class="mention-card">Professional Crew</div>
+<div class="mention-card">Careful Tree Removal</div>
+<div class="mention-card">Thorough Cleanup</div>
+<div class="mention-card">Property Protection</div>
 </div>
 
 </div>
 </section>
 
-<section class="review-cta">
+<section class="cta">
 <div class="container">
+
 <h2>Need Tree Work Done?</h2>
-<p>Request a free estimate from A&O Tree Service. Licensed, insured, locally owned, and specializing in dead and dangerous trees.</p>
+
+<p>
+Request a free estimate from A&O Tree Service. Licensed, insured, locally owned, and specializing in dead and dangerous trees.
+</p>
+
 <a href="index.html#estimate" class="btn btn-secondary">Request a Free Estimate</a>
 <a href="tel:3343323873" class="btn btn-primary">Call 334-332-3873</a>
+
 </div>
 </section>
 
@@ -452,28 +556,6 @@ Licensed & Insured • Locally Owned • Free Estimates
 
 </div>
 </footer>
-
-<script>
-let currentSlide = 0;
-const slides = document.querySelectorAll(".slide");
-
-function showSlide(index){
-slides.forEach(slide => slide.classList.remove("active"));
-slides[index].classList.add("active");
-}
-
-function nextSlide(){
-currentSlide = (currentSlide + 1) % slides.length;
-showSlide(currentSlide);
-}
-
-function prevSlide(){
-currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-showSlide(currentSlide);
-}
-
-setInterval(nextSlide, 4500);
-</script>
 
 </body>
 </html>
