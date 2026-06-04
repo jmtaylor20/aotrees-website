@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Land Clearing & Brush Removal | A&O Tree Service</title>
+
+<meta name="description" content="A&O Tree Service provides land clearing, brush removal, small tree removal, skid steer work, debris cleanup, and site preparation across Notasulga, Auburn, Opelika, Tallassee, Lake Martin, Montgomery, and East Central Alabama.">
+
+<style>
+:root{
+--green:#004b27;
+--green2:#0c6a3b;
+--lime:#95b81f;
+--dark:#062716;
+--light:#f5f7f4;
+--white:#ffffff;
+--shadow:0 14px 40px rgba(0,0,0,.12);
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:white;
+color:#173321;
+line-height:1.6;
+}
+
+.container{width:min(1180px,92%);margin:auto;}
+a{text-decoration:none;color:inherit;}
+img{max-width:100%;display:block;}
+
+header{
+background:rgba(255,255,255,.96);
+position:sticky;
+top:0;
+z-index:1000;
+border-bottom:1px solid #e3e7e2;
+}
+
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:14px 0;
+}
+
+.logo img{height:82px;}
+
+.nav-right{
+display:flex;
+align-items:center;
+gap:18px;
+}
+
+.nav-link{
+font-weight:800;
+color:var(--green);
+}
+
+.phone{
+font-weight:800;
+color:var(--green);
+font-size:17px;
+}
+
+.phone small{
+display:block;
+font-size:12px;
+font-weight:600;
+opacity:.7;
+margin-top:-2px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 24px;
+border-radius:999px;
+font-weight:800;
+transition:.25s;
+}
+
+.btn:hover{transform:translateY(-2px);}
+.btn-primary{background:var(--green);color:white;}
+.btn-secondary{background:var(--lime);color:#122211;}
+
+.hero{
+background:
+linear-gradient(rgba(0,65,35,.74),rgba(0,65,35,.74)),
+url("assets/LandClearing.jpeg");
+background-size:cover;
+background-position:center;
+color:white;
+padding:95px 0;
+}
+
+.hero h1{
+font-size:clamp(54px,7vw,86px);
+line-height:.95;
+max-width:950px;
+margin-bottom:22px;
+}
+
+.hero p{
+font-size:22px;
+max-width:820px;
+margin-bottom:28px;
+}
+
+.hero-buttons{
+display:flex;
+gap:14px;
+flex-wrap:wrap;
+}
+
+section{padding:80px 0;}
+
+.section-title{
+font-size:clamp(40px,5vw,62px);
+line-height:1;
+color:var(--green);
+margin-bottom:16px;
+}
+
+.section-lead{
+font-size:20px;
+color:#5a665f;
+max-width:850px;
+margin-bottom:38px;
+}
+
+.split-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.content-card{
+background:white;
+border-radius:28px;
+padding:34px;
+box-shadow:var(--shadow);
+border:1px solid #e3e8e1;
+}
+
+.content-card h2{
+color:var(--green);
+font-size:42px;
+line-height:1.05;
+margin-bottom:18px;
+}
+
+.content-card p{
+font-size:19px;
+color:#4f5d55;
+margin-bottom:18px;
+}
+
+.split-img{
+width:100%;
+height:520px;
+object-fit:cover;
+border-radius:28px;
+box-shadow:var(--shadow);
+}
+
+.clearing-section{
+background:var(--light);
+}
+
+.clearing-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:24px;
+}
+
+.clearing-card{
+background:white;
+border-radius:24px;
+padding:26px;
+box-shadow:var(--shadow);
+border:1px solid #e3e8e1;
+}
+
+.clearing-card h3{
+color:var(--green);
+font-size:24px;
+margin-bottom:10px;
+}
+
+.clearing-card p{
+color:#5a665f;
+}
+
+.process-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
+}
+
+.process-card{
+background:white;
+box-shadow:var(--shadow);
+border-radius:22px;
+padding:24px;
+border:1px solid #e3e8e1;
+}
+
+.process-number{
+width:44px;
+height:44px;
+border-radius:999px;
+background:var(--green);
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:900;
+font-size:20px;
+margin-bottom:16px;
+}
+
+.process-card h3{
+color:var(--green);
+margin-bottom:8px;
+font-size:21px;
+}
+
+.site-prep{
+background:var(--green);
+color:white;
+}
+
+.site-prep .section-title{
+color:white;
+}
+
+.site-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:36px;
+align-items:center;
+}
+
+.site-prep p{
+font-size:20px;
+margin-bottom:20px;
+}
+
+.check-list{
+display:grid;
+gap:12px;
+margin-top:22px;
+}
+
+.check-item{
+background:rgba(255,255,255,.12);
+border:1px solid rgba(255,255,255,.22);
+border-radius:16px;
+padding:16px;
+font-weight:800;
+}
+
+.site-img{
+width:100%;
+height:460px;
+object-fit:cover;
+border-radius:28px;
+box-shadow:var(--shadow);
+}
+
+.photo-strip{
+background:var(--light);
+}
+
+.photo-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:22px;
+}
+
+.photo-grid img{
+height:280px;
+width:100%;
+object-fit:cover;
+border-radius:22px;
+box-shadow:var(--shadow);
+}
+
+.area-section{
+background:white;
+}
+
+.pills{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+}
+
+.pill{
+border:1px solid #d7ddd8;
+background:var(--light);
+color:var(--green);
+padding:10px 14px;
+border-radius:999px;
+font-weight:800;
+font-size:14px;
+}
+
+.cta{
+background:var(--green);
+color:white;
+text-align:center;
+}
+
+.cta h2{
+font-size:clamp(42px,5vw,64px);
+line-height:1;
+margin-bottom:18px;
+}
+
+.cta p{
+font-size:21px;
+max-width:760px;
+margin:0 auto 28px;
+}
+
+footer{
+background:var(--dark);
+color:white;
+padding:70px 0;
+text-align:center;
+}
+
+footer img{
+max-width:420px;
+margin:0 auto 26px;
+}
+
+footer p{margin-bottom:10px;}
+
+@media(max-width:980px){
+.nav{
+flex-direction:column;
+gap:14px;
+}
+
+.nav-right{
+flex-direction:column;
+}
+
+.logo img{height:70px;}
+
+.split-grid,
+.clearing-grid,
+.process-grid,
+.site-grid,
+.photo-grid{
+grid-template-columns:1fr;
+}
+
+.split-img,
+.site-img{
+height:340px;
+}
+
+.hero{
+padding:70px 0;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container nav">
+
+<a href="index.html" class="logo">
+<img src="logo-simple.png" alt="A&O Tree Service">
+</a>
+
+<div class="nav-right">
+<a href="index.html" class="nav-link">Home</a>
+<a href="about.html" class="nav-link">About</a>
+<a href="services.html" class="nav-link">Services</a>
+<a href="gallery.html" class="nav-link">Gallery</a>
+<a href="testimonials.html" class="nav-link">Reviews</a>
+<a href="contact.html" class="nav-link">Contact</a>
+
+<div class="phone">
+334-332-3873
+<small>Call Anytime</small>
+</div>
+
+<a href="contact.html#contact-form" class="btn btn-primary">Request a Free Estimate</a>
+</div>
+
+</div>
+</header>
+
+<section class="hero">
+<div class="container">
+
+<h1>Land Clearing & Brush Removal</h1>
+
+<p>
+A&O Tree Service provides land clearing, brush removal, small tree removal, skid steer work, and cleanup services for overgrown properties across East Central Alabama.
+</p>
+
+<div class="hero-buttons">
+<a href="contact.html#contact-form" class="btn btn-secondary">Request a Free Estimate</a>
+<a href="tel:3343323873" class="btn btn-primary">Call 334-332-3873</a>
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container split-grid">
+
+<div class="content-card">
+<h2>Clear Overgrown Property</h2>
+
+<p>
+Overgrown land can limit how you use your property. Thick brush, small trees, vines, fallen limbs, and debris can make an area hard to access or maintain.
+</p>
+
+<p>
+A&O Tree Service helps landowners, homeowners, and businesses clear unwanted growth and prepare areas for future use.
+</p>
+
+<p>
+From brush cleanup to skid steer support, A&O brings the equipment and experience needed to handle land clearing and property cleanup.
+</p>
+</div>
+
+<img class="split-img" src="assets/ThickBrush.jpeg" alt="Thick brush removal">
+
+</div>
+</section>
+
+<section class="clearing-section">
+<div class="container">
+
+<h2 class="section-title">Land Clearing Services</h2>
+
+<p class="section-lead">
+A&O can help clear brush, small trees, limbs, and debris from residential, rural, and commercial properties.
+</p>
+
+<div class="clearing-grid">
+
+<div class="clearing-card">
+<h3>Brush Removal</h3>
+<p>Removal of thick brush, vines, overgrowth, limbs, and unwanted vegetation.</p>
+</div>
+
+<div class="clearing-card">
+<h3>Small Tree Removal</h3>
+<p>Clearing small trees and saplings from fence lines, property edges, and overgrown areas.</p>
+</div>
+
+<div class="clearing-card">
+<h3>Lot Cleanup</h3>
+<p>Cleaning up limbs, brush piles, fallen branches, and unwanted debris from your property.</p>
+</div>
+
+<div class="clearing-card">
+<h3>Skid Steer Work</h3>
+<p>Equipment support for moving brush, debris, limbs, and cleanup material.</p>
+</div>
+
+<div class="clearing-card">
+<h3>Fence Line Clearing</h3>
+<p>Clearing growth along fences, edges, driveways, and access paths.</p>
+</div>
+
+<div class="clearing-card">
+<h3>Site Preparation</h3>
+<p>Preparing property for future projects, access, mowing, maintenance, or cleanup.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<h2 class="section-title">How Land Clearing Works</h2>
+
+<p class="section-lead">
+A&O keeps the process clear so you know what will be removed and how the area will be cleaned up.
+</p>
+
+<div class="process-grid">
+
+<div class="process-card">
+<div class="process-number">1</div>
+<h3>Request Estimate</h3>
+<p>Call or submit the contact form with details about the area you need cleared.</p>
+</div>
+
+<div class="process-card">
+<div class="process-number">2</div>
+<h3>Review the Property</h3>
+<p>A&O reviews access, brush density, trees, debris, and equipment needs.</p>
+</div>
+
+<div class="process-card">
+<div class="process-number">3</div>
+<h3>Clear the Area</h3>
+<p>The crew removes brush, small trees, limbs, and debris based on the job plan.</p>
+</div>
+
+<div class="process-card">
+<div class="process-number">4</div>
+<h3>Clean Up</h3>
+<p>Debris is moved, piled, or hauled based on the estimate and cleanup plan.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="site-prep">
+<div class="container site-grid">
+
+<div>
+<h2 class="section-title">Site Preparation & Property Protection</h2>
+
+<p>
+Land clearing is not only about removing brush. It is also about making the property easier to use while paying attention to drainage, access, erosion, and nearby structures.
+</p>
+
+<p>
+A&O works with the property conditions in mind and helps clean up areas so the next step is easier.
+</p>
+
+<div class="check-list">
+<div class="check-item">Brush, limb, and debris cleanup</div>
+<div class="check-item">Drainage and erosion control awareness</div>
+<div class="check-item">Clearing around access points, driveways, and fences</div>
+<div class="check-item">Skid steer support for cleanup and site work</div>
+</div>
+</div>
+
+<img class="site-img" src="assets/SkidSteerCutting.jpeg" alt="Skid steer land clearing">
+
+</div>
+</section>
+
+<section class="photo-strip">
+<div class="container">
+
+<h2 class="section-title">Land Clearing in Action</h2>
+
+<p class="section-lead">
+A look at brush removal, skid steer work, overgrowth cleanup, and property clearing.
+</p>
+
+<div class="photo-grid">
+<img src="assets/LandClearing.jpeg" alt="Land clearing">
+<img src="assets/SkidSteer.jpeg" alt="Skid steer cleanup">
+<img src="assets/LargeBrushCleanUp.jpeg" alt="Large brush cleanup">
+</div>
+
+</div>
+</section>
+
+<section class="area-section">
+<div class="container">
+
+<h2 class="section-title">Land Clearing Near You</h2>
+
+<p class="section-lead">
+A&O Tree Service is based in Notasulga and provides land clearing and brush removal across East Central Alabama.
+</p>
+
+<div class="pills">
+<div class="pill">Notasulga</div>
+<div class="pill">Auburn</div>
+<div class="pill">Opelika</div>
+<div class="pill">Tuskegee</div>
+<div class="pill">Tallassee</div>
+<div class="pill">Lake Martin</div>
+<div class="pill">Dadeville</div>
+<div class="pill">Montgomery</div>
+<div class="pill">East Central Alabama</div>
+</div>
+
+</div>
+</section>
+
+<section class="cta">
+<div class="container">
+
+<h2>Need Property Cleared?</h2>
+
+<p>
+Request a free estimate from A&O Tree Service for land clearing, brush removal, small tree removal, skid steer work, and cleanup.
+</p>
+
+<a href="contact.html#contact-form" class="btn btn-secondary">Request a Free Estimate</a>
+<a href="tel:3343323873" class="btn btn-primary">Call 334-332-3873</a>
+
+</div>
+</section>
+
+<footer>
+<div class="container">
+
+<img src="logo-oval.png" alt="A&O Tree Service">
+
+<h3>A&O Tree Service LLC</h3>
+
+<p>Specializing in dead and dangerous trees</p>
+
+<p>
+3960 Tallapoosa Street<br>
+Notasulga, AL 36866
+</p>
+
+<p>
+334-332-3873 • info@aotrees.com
+</p>
+
+<p>
+Licensed & Insured • Locally Owned • Free Estimates
+</p>
+
+<p>aotrees.com</p>
+
+</div>
+</footer>
+
+</body>
+</html>
