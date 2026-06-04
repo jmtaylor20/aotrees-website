@@ -90,7 +90,7 @@ transition:.25s;
 .hero{
 background:
 linear-gradient(rgba(0,65,35,.74),rgba(0,65,35,.74)),
-url("assets/LandClearing.jpeg");
+url("assets/LandClearing.JPG");
 background-size:cover;
 background-position:center;
 color:white;
@@ -291,8 +291,37 @@ border-radius:22px;
 box-shadow:var(--shadow);
 }
 
-.area-section{
+.related-section{
 background:white;
+}
+
+.related-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+}
+
+.related-card{
+background:white;
+border-radius:20px;
+padding:22px;
+box-shadow:var(--shadow);
+border:1px solid #e3e8e1;
+}
+
+.related-card h3{
+color:var(--green);
+font-size:22px;
+margin-bottom:8px;
+}
+
+.related-card p{
+color:#5a665f;
+margin-bottom:16px;
+}
+
+.area-section{
+background:var(--light);
 }
 
 .pills{
@@ -303,7 +332,7 @@ flex-wrap:wrap;
 
 .pill{
 border:1px solid #d7ddd8;
-background:var(--light);
+background:white;
 color:var(--green);
 padding:10px 14px;
 border-radius:999px;
@@ -327,6 +356,19 @@ margin-bottom:18px;
 font-size:21px;
 max-width:760px;
 margin:0 auto 28px;
+}
+
+.footer-links{
+display:flex;
+justify-content:center;
+gap:18px;
+flex-wrap:wrap;
+margin:24px 0;
+}
+
+.footer-links a{
+font-weight:800;
+color:#d7ecae;
 }
 
 footer{
@@ -359,7 +401,8 @@ flex-direction:column;
 .clearing-grid,
 .process-grid,
 .site-grid,
-.photo-grid{
+.photo-grid,
+.related-grid{
 grid-template-columns:1fr;
 }
 
@@ -394,7 +437,7 @@ padding:70px 0;
 
 <div class="phone">
 334-332-3873
-<small>Call Anytime</small>
+<small>Call or Text Anytime</small>
 </div>
 
 <a href="contact.html#contact-form" class="btn btn-primary">Request a Free Estimate</a>
@@ -437,6 +480,8 @@ A&O Tree Service helps landowners, homeowners, and businesses clear unwanted gro
 <p>
 From brush cleanup to skid steer support, A&O brings the equipment and experience needed to handle land clearing and property cleanup.
 </p>
+
+<a href="gallery.html" class="btn btn-primary">View Recent Work</a>
 </div>
 
 <img class="split-img" src="assets/ThickBrush.jpeg" alt="Thick brush removal">
@@ -548,6 +593,10 @@ A&O works with the property conditions in mind and helps clean up areas so the n
 <div class="check-item">Clearing around access points, driveways, and fences</div>
 <div class="check-item">Skid steer support for cleanup and site work</div>
 </div>
+
+<div style="margin-top:28px;">
+<a href="services.html" class="btn btn-secondary">View All Services</a>
+</div>
 </div>
 
 <img class="site-img" src="assets/SkidSteerCutting.jpeg" alt="Skid steer land clearing">
@@ -565,11 +614,48 @@ A look at brush removal, skid steer work, overgrowth cleanup, and property clear
 </p>
 
 <div class="photo-grid">
-<img src="assets/LandClearing.jpeg" alt="Land clearing">
+<img src="assets/LandClearing.JPG" alt="Land clearing">
 <img src="assets/SkidSteer.jpeg" alt="Skid steer cleanup">
 <img src="assets/LargeBrushCleanUp.jpeg" alt="Large brush cleanup">
 </div>
 
+<div style="margin-top:30px;">
+<a href="gallery.html" class="btn btn-primary">View Full Gallery</a>
+</div>
+
+</div>
+</section>
+
+<section class="related-section">
+<div class="container">
+
+<h2 class="section-title">Related Services</h2>
+
+<p class="section-lead">
+Land clearing often connects with tree removal, cleanup, storm debris removal, and stump grinding.
+</p>
+
+<div class="related-grid">
+
+<div class="related-card">
+<h3>Tree Removal</h3>
+<p>Removal of unwanted, damaged, leaning, or hazardous trees.</p>
+<a href="tree-removal.html" class="btn btn-primary">Learn More</a>
+</div>
+
+<div class="related-card">
+<h3>Stump Grinding</h3>
+<p>Stump grinding and cleanup after tree or brush removal.</p>
+<a href="stump-grinding.html" class="btn btn-primary">Learn More</a>
+</div>
+
+<div class="related-card">
+<h3>Storm Cleanup</h3>
+<p>Cleanup after fallen trees, limbs, brush, and storm debris.</p>
+<a href="storm-cleanup.html" class="btn btn-primary">Learn More</a>
+</div>
+
+</div>
 </div>
 </section>
 
@@ -629,6 +715,20 @@ Notasulga, AL 36866
 <p>
 334-332-3873 • info@aotrees.com
 </p>
+
+<div class="footer-links">
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="tree-removal.html">Tree Removal</a>
+<a href="dead-dangerous-tree-removal.html">Dangerous Trees</a>
+<a href="emergency-tree-service.html">Emergency Service</a>
+<a href="storm-cleanup.html">Storm Cleanup</a>
+<a href="land-clearing.html">Land Clearing</a>
+<a href="stump-grinding.html">Stump Grinding</a>
+<a href="gallery.html">Gallery</a>
+<a href="testimonials.html">Reviews</a>
+<a href="contact.html">Contact</a>
+</div>
 
 <p>
 Licensed & Insured • Locally Owned • Free Estimates
