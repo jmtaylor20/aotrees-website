@@ -234,77 +234,7 @@ color:#5a665f;
 margin-bottom:36px;
 }
 
-.services-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:24px;
-}
-
-.service-card{
-background:white;
-border-radius:24px;
-overflow:hidden;
-box-shadow:var(--shadow);
-border:1px solid #e3e8e1;
-}
-
-.service-card img{
-height:240px;
-width:100%;
-object-fit:cover;
-}
-
-.service-content{padding:24px;}
-
-.service-content h3{
-color:var(--green);
-margin-bottom:10px;
-font-size:24px;
-}
-
-.service-content p{
-margin-bottom:18px;
-color:#5a665f;
-}
-
-.gallery{background:var(--light);}
-
-.gallery-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:22px;
-}
-
-.gallery-grid img{
-height:270px;
-width:100%;
-object-fit:cover;
-border-radius:22px;
-box-shadow:var(--shadow);
-}
-
-.reviews-preview{
-background:white;
-text-align:center;
-}
-
-.review-score{
-display:inline-flex;
-align-items:center;
-gap:12px;
-background:var(--light);
-border:1px solid #dfe6dc;
-border-radius:18px;
-padding:16px 22px;
-font-weight:900;
-color:var(--green);
-margin-bottom:24px;
-flex-wrap:wrap;
-}
-
-.stars{color:#d8a900;}
-
-  .review-ticker-section{
+.review-ticker-section{
 background:var(--green);
 color:white;
 padding:34px 0;
@@ -376,15 +306,75 @@ color:var(--green);
 100%{transform:translateX(-50%);}
 }
 
-@media(max-width:980px){
-.review-slide{
-width:300px;
+.services-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:24px;
 }
 
-.review-track{
-animation-duration:60s;
+.service-card{
+background:white;
+border-radius:24px;
+overflow:hidden;
+box-shadow:var(--shadow);
+border:1px solid #e3e8e1;
 }
+
+.service-card img{
+height:240px;
+width:100%;
+object-fit:cover;
 }
+
+.service-content{padding:24px;}
+
+.service-content h3{
+color:var(--green);
+margin-bottom:10px;
+font-size:24px;
+}
+
+.service-content p{
+margin-bottom:18px;
+color:#5a665f;
+}
+
+.gallery{background:var(--light);}
+
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:22px;
+}
+
+.gallery-grid img{
+height:270px;
+width:100%;
+object-fit:cover;
+border-radius:22px;
+box-shadow:var(--shadow);
+}
+
+.reviews-preview{
+background:white;
+text-align:center;
+}
+
+.review-score{
+display:inline-flex;
+align-items:center;
+gap:12px;
+background:var(--light);
+border:1px solid #dfe6dc;
+border-radius:18px;
+padding:16px 22px;
+font-weight:900;
+color:var(--green);
+margin-bottom:24px;
+flex-wrap:wrap;
+}
+
+.stars{color:#d8a900;}
 
 .property-section{
 background:var(--light);
@@ -463,6 +453,18 @@ flex-direction:column;
 }
 
 section{padding:60px 0;}
+
+.review-slide{
+width:300px;
+}
+
+.review-track{
+animation-duration:60s;
+}
+
+.review-ticker-header{
+align-items:flex-start;
+}
 }
 </style>
 </head>
@@ -564,6 +566,90 @@ A&O Tree Service provides professional tree removal, storm cleanup, limb removal
 <div class="trust-item">Locally Owned</div>
 <div class="trust-item">Emergency Services</div>
 <div class="trust-item">Free Estimates</div>
+</div>
+</section>
+
+<section class="review-ticker-section">
+<div class="container">
+
+<div class="review-ticker-header">
+<div>
+<h2>What Customers Are Saying</h2>
+<p>4.8 Stars • 43 Google Reviews</p>
+</div>
+
+<div>
+<a href="testimonials.html" class="btn btn-secondary">Read Reviews</a>
+<a href="https://g.page/r/CQDHC12B4XqOEBM/review" class="btn btn-primary" target="_blank" rel="noopener">Leave a Review</a>
+</div>
+</div>
+
+<div class="review-ticker">
+<div class="review-track">
+
+<div class="review-slide">
+<div class="stars">★★★★★</div>
+<p>“A&O is amazing! I contacted them via their website and they were in touch the same day. Everyone I spoke to was so kind and professional.”</p>
+<strong>Hillary Pruitt</strong>
+</div>
+
+<div class="review-slide">
+<div class="stars">★★★★★</div>
+<p>“These guys are true professionals who really know what they’re doing. Friendly, punctual, affordable, and most importantly, they know what they’re doing.”</p>
+<strong>Wilton’s Catering</strong>
+</div>
+
+<div class="review-slide">
+<div class="stars">★★★★★</div>
+<p>“Perfect is a good description. They took 6 trees out with extreme precision and cleaned up everything.”</p>
+<strong>Streetninja 0909</strong>
+</div>
+
+<div class="review-slide">
+<div class="stars">★★★★★</div>
+<p>“A&O came out and took care of a massive job—removing trees, stumps, and even doing some detailed pruning.”</p>
+<strong>Brittany Wheatley</strong>
+</div>
+
+<div class="review-slide">
+<div class="stars">★★★★★</div>
+<p>“Fair pricing, easy scheduling, and they were kind enough to allow me to adjust the scope. They took three massive trees near my house.”</p>
+<strong>Patrick Klesius</strong>
+</div>
+
+<div class="review-slide">
+<div class="stars">★★★★★</div>
+<p>“A&O is amazing! I contacted them via their website and they were in touch the same day. Everyone I spoke to was so kind and professional.”</p>
+<strong>Hillary Pruitt</strong>
+</div>
+
+<div class="review-slide">
+<div class="stars">★★★★★</div>
+<p>“These guys are true professionals who really know what they’re doing. Friendly, punctual, affordable, and most importantly, they know what they’re doing.”</p>
+<strong>Wilton’s Catering</strong>
+</div>
+
+<div class="review-slide">
+<div class="stars">★★★★★</div>
+<p>“Perfect is a good description. They took 6 trees out with extreme precision and cleaned up everything.”</p>
+<strong>Streetninja 0909</strong>
+</div>
+
+<div class="review-slide">
+<div class="stars">★★★★★</div>
+<p>“A&O came out and took care of a massive job—removing trees, stumps, and even doing some detailed pruning.”</p>
+<strong>Brittany Wheatley</strong>
+</div>
+
+<div class="review-slide">
+<div class="stars">★★★★★</div>
+<p>“Fair pricing, easy scheduling, and they were kind enough to allow me to adjust the scope. They took three massive trees near my house.”</p>
+<strong>Patrick Klesius</strong>
+</div>
+
+</div>
+</div>
+
 </div>
 </section>
 
