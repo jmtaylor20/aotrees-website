@@ -90,7 +90,7 @@ transition:.25s;
 .hero{
 background:
 linear-gradient(rgba(0,65,35,.74),rgba(0,65,35,.74)),
-url("assets/ChainsawStorm.jpeg");
+url("assets/ChainSawStorm.jpg");
 background-size:cover;
 background-position:center;
 color:white;
@@ -304,8 +304,37 @@ border-radius:22px;
 box-shadow:var(--shadow);
 }
 
-.area-section{
+.related-section{
 background:white;
+}
+
+.related-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+}
+
+.related-card{
+background:white;
+border-radius:20px;
+padding:22px;
+box-shadow:var(--shadow);
+border:1px solid #e3e8e1;
+}
+
+.related-card h3{
+color:var(--green);
+font-size:22px;
+margin-bottom:8px;
+}
+
+.related-card p{
+color:#5a665f;
+margin-bottom:16px;
+}
+
+.area-section{
+background:var(--light);
 }
 
 .pills{
@@ -316,7 +345,7 @@ flex-wrap:wrap;
 
 .pill{
 border:1px solid #d7ddd8;
-background:var(--light);
+background:white;
 color:var(--green);
 padding:10px 14px;
 border-radius:999px;
@@ -340,6 +369,19 @@ margin-bottom:18px;
 font-size:21px;
 max-width:760px;
 margin:0 auto 28px;
+}
+
+.footer-links{
+display:flex;
+justify-content:center;
+gap:18px;
+flex-wrap:wrap;
+margin:24px 0;
+}
+
+.footer-links a{
+font-weight:800;
+color:#d7ecae;
 }
 
 footer{
@@ -372,7 +414,8 @@ flex-direction:column;
 .cleanup-grid,
 .process-grid,
 .property-grid,
-.photo-grid{
+.photo-grid,
+.related-grid{
 grid-template-columns:1fr;
 }
 
@@ -407,7 +450,7 @@ padding:70px 0;
 
 <div class="phone">
 334-332-3873
-<small>Call Anytime</small>
+<small>Call or Text Anytime</small>
 </div>
 
 <a href="contact.html#contact-form" class="btn btn-primary">Request a Free Estimate</a>
@@ -454,6 +497,8 @@ A&O Tree Service helps property owners clear fallen trees, broken limbs, brush p
 <p>
 From urgent fallen tree removal to full debris cleanup, A&O brings over 20 years of experience to storm cleanup work across Notasulga, Auburn, Opelika, Tallassee, Lake Martin, Montgomery, and surrounding areas.
 </p>
+
+<a href="contact.html#contact-form" class="btn btn-primary">Request Storm Cleanup</a>
 </div>
 
 <img class="split-img" src="assets/FallenTree.jpeg" alt="Fallen tree after storm">
@@ -565,6 +610,10 @@ A&O focuses on safe cleanup, careful removal, and protecting nearby structures, 
 <div class="check-item">Attention to access routes and property conditions</div>
 <div class="check-item">Emergency tree service available when storms create urgent hazards</div>
 </div>
+
+<div style="margin-top:28px;">
+<a href="emergency-tree-service.html" class="btn btn-secondary">Emergency Tree Service</a>
+</div>
 </div>
 
 <img class="property-img" src="assets/DebrisRemoval.jpeg" alt="Storm debris removal">
@@ -582,11 +631,48 @@ A look at fallen trees, storm debris cleanup, and tree work after severe weather
 </p>
 
 <div class="photo-grid">
-<img src="assets/ChainsawStorm.jpeg" alt="Chainsaw storm cleanup">
+<img src="assets/ChainSawStorm.jpg" alt="Chainsaw storm cleanup">
 <img src="assets/FallenTreeRemoval.jpeg" alt="Fallen tree removal">
 <img src="assets/DebrisRemoval.jpeg" alt="Tree debris removal">
 </div>
 
+<div style="margin-top:30px;">
+<a href="gallery.html" class="btn btn-primary">View Full Gallery</a>
+</div>
+
+</div>
+</section>
+
+<section class="related-section">
+<div class="container">
+
+<h2 class="section-title">Related Services</h2>
+
+<p class="section-lead">
+Storm cleanup often connects with emergency service, fallen tree removal, and dangerous tree work.
+</p>
+
+<div class="related-grid">
+
+<div class="related-card">
+<h3>Emergency Tree Service</h3>
+<p>Help with fallen trees, blocked access, broken limbs, and urgent tree hazards.</p>
+<a href="emergency-tree-service.html" class="btn btn-primary">Learn More</a>
+</div>
+
+<div class="related-card">
+<h3>Dead & Dangerous Trees</h3>
+<p>Removal of unsafe trees near homes, fences, driveways, and structures.</p>
+<a href="dead-dangerous-tree-removal.html" class="btn btn-primary">Learn More</a>
+</div>
+
+<div class="related-card">
+<h3>Tree Removal</h3>
+<p>Safe removal of damaged, leaning, dead, or unwanted trees.</p>
+<a href="tree-removal.html" class="btn btn-primary">Learn More</a>
+</div>
+
+</div>
 </div>
 </section>
 
@@ -646,6 +732,20 @@ Notasulga, AL 36866
 <p>
 334-332-3873 • info@aotrees.com
 </p>
+
+<div class="footer-links">
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="tree-removal.html">Tree Removal</a>
+<a href="dead-dangerous-tree-removal.html">Dangerous Trees</a>
+<a href="emergency-tree-service.html">Emergency Service</a>
+<a href="storm-cleanup.html">Storm Cleanup</a>
+<a href="land-clearing.html">Land Clearing</a>
+<a href="stump-grinding.html">Stump Grinding</a>
+<a href="gallery.html">Gallery</a>
+<a href="testimonials.html">Reviews</a>
+<a href="contact.html">Contact</a>
+</div>
 
 <p>
 Licensed & Insured • Locally Owned • Free Estimates
