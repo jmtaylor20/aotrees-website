@@ -1,1 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Thank You | A&O Tree Service</title>
+
+<meta name="description" content="Thank you for contacting A&O Tree Service. Your request has been received.">
+<meta name="robots" content="noindex, nofollow">
+
+<style>
+:root{
+--green:#004b27;
+--green2:#0c6a3b;
+--lime:#95b81f;
+--dark:#062716;
+--light:#f5f7f4;
+--white:#ffffff;
+--shadow:0 14px 40px rgba(0,0,0,.12);
+}
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:var(--light);
+color:#173321;
+line-height:1.6;
+}
+
+.container{
+width:min(1120px,92%);
+margin:auto;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+img{
+max-width:100%;
+display:block;
+}
+
+.btn{
+display:inline-block;
+padding:14px 24px;
+border-radius:999px;
+font-weight:800;
+transition:.25s;
+}
+
+.btn:hover{
+transform:translateY(-2px);
+}
+
+.btn-primary{
+background:var(--green);
+color:white;
+}
+
+.btn-secondary{
+background:var(--lime);
+color:#122211;
+}
+
+.top{
+background:white;
+border-bottom:1px solid #e3e7e2;
+padding:18px 0;
+}
+
+.top-inner{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:18px;
+}
+
+.logo img{
+height:78px;
+}
+
+.phone{
+font-weight:900;
+color:var(--green);
+font-size:20px;
+text-align:right;
+}
+
+.phone small{
+display:block;
+font-size:13px;
+font-weight:700;
+opacity:.75;
+}
+
+.hero{
+background:
+linear-gradient(rgba(0,65,35,.76),rgba(0,65,35,.76)),
+url("assets/AOTreeTruck.jpeg");
+background-size:cover;
+background-position:center;
+color:white;
+padding:90px 0;
+}
+
+.hero-card{
+background:white;
+color:#173321;
+border-radius:30px;
+padding:44px;
+box-shadow:var(--shadow);
+max-width:820px;
+}
+
+.badge{
+display:inline-block;
+background:var(--lime);
+color:#122211;
+font-weight:900;
+border-radius:999px;
+padding:9px 14px;
+margin-bottom:18px;
+}
+
+.hero-card h1{
+font-size:clamp(44px,6vw,70px);
+line-height:1;
+color:var(--green);
+margin-bottom:18px;
+}
+
+.hero-card p{
+font-size:21px;
+color:#4f5d55;
+margin-bottom:22px;
+}
+
+.hero-buttons{
+display:flex;
+gap:14px;
+flex-wrap:wrap;
+margin-top:28px;
+}
+
+section{
+padding:70px 0;
+}
+
+.section-title{
+font-size:clamp(38px,5vw,56px);
+line-height:1;
+color:var(--green);
+margin-bottom:16px;
+}
+
+.section-lead{
+font-size:20px;
+color:#5a665f;
+max-width:820px;
+margin-bottom:34px;
+}
+
+.next-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+
+.next-card{
+background:white;
+border-radius:24px;
+padding:26px;
+box-shadow:var(--shadow);
+border:1px solid #e3e8e1;
+}
+
+.next-number{
+width:44px;
+height:44px;
+border-radius:999px;
+background:var(--green);
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:900;
+font-size:20px;
+margin-bottom:16px;
+}
+
+.next-card h3{
+color:var(--green);
+font-size:22px;
+margin-bottom:8px;
+}
+
+.next-card p{
+color:#5a665f;
+}
+
+.emergency{
+background:var(--green);
+color:white;
+}
+
+.emergency .section-title{
+color:white;
+}
+
+.emergency-grid{
+display:grid;
+grid-template-columns:1.1fr .9fr;
+gap:34px;
+align-items:center;
+}
+
+.emergency p{
+font-size:21px;
+margin-bottom:22px;
+}
+
+.emergency-box{
+background:rgba(255,255,255,.12);
+border:1px solid rgba(255,255,255,.24);
+border-radius:24px;
+padding:28px;
+}
+
+.emergency-box h3{
+font-size:28px;
+margin-bottom:12px;
+}
+
+.emergency-box ul{
+list-style:none;
+display:grid;
+gap:10px;
+}
+
+.emergency-box li{
+font-weight:800;
+}
+
+.links-section{
+background:white;
+}
+
+.link-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+
+.link-card{
+background:var(--light);
+border-radius:22px;
+padding:24px;
+box-shadow:var(--shadow);
+border:1px solid #e3e8e1;
+}
+
+.link-card h3{
+color:var(--green);
+font-size:22px;
+margin-bottom:8px;
+}
+
+.link-card p{
+color:#5a665f;
+margin-bottom:18px;
+}
+
+footer{
+background:var(--dark);
+color:white;
+padding:60px 0;
+text-align:center;
+}
+
+footer img{
+max-width:380px;
+margin:0 auto 24px;
+}
+
+footer p{
+margin-bottom:10px;
+}
+
+@media(max-width:980px){
+.top-inner{
+flex-direction:column;
+text-align:center;
+}
+
+.logo img{
+height:62px;
+margin:auto;
+}
+
+.phone{
+text-align:center;
+}
+
+.hero{
+padding:54px 0;
+}
+
+.hero-card{
+padding:28px;
+}
+
+.hero-card h1{
+font-size:42px;
+}
+
+.hero-card p{
+font-size:18px;
+}
+
+.next-grid,
+.emergency-grid,
+.link-grid{
+grid-template-columns:1fr;
+}
+
+section{
+padding:54px 0;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header class="top">
+<div class="container top-inner">
+
+<a href="index.html" class="logo">
+<img src="logo-simple.png" alt="A&O Tree Service">
+</a>
+
+<div class="phone">
+<a href="tel:3343323873">334-332-3873</a>
+<small>Call or Text Anytime</small>
+</div>
+
+</div>
+</header>
+
+<section class="hero">
+<div class="container">
+
+<div class="hero-card">
+<div class="badge">Request Received</div>
+
+<h1>Thank You</h1>
+
+<p>
+Your request has been received by A&O Tree Service. Someone will review your information and follow up as soon as possible.
+</p>
+
+<p>
+If this is an emergency involving a fallen tree, blocked driveway, storm damage, or a dangerous tree near your home, call now.
+</p>
+
+<div class="hero-buttons">
+<a href="tel:3343323873" class="btn btn-secondary">Call 334-332-3873</a>
+<a href="index.html" class="btn btn-primary">Return Home</a>
+</div>
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<h2 class="section-title">What Happens Next</h2>
+
+<p class="section-lead">
+Here is what you can expect after submitting your request.
+</p>
+
+<div class="next-grid">
+
+<div class="next-card">
+<div class="next-number">1</div>
+<h3>Request Review</h3>
+<p>A&O reviews your name, contact information, service location, and tree service details.</p>
+</div>
+
+<div class="next-card">
+<div class="next-number">2</div>
+<h3>Follow-Up</h3>
+<p>Someone will contact you by your preferred method: call, text, or email.</p>
+</div>
+
+<div class="next-card">
+<div class="next-number">3</div>
+<h3>Job Details</h3>
+<p>A&O may ask for photos, property access details, or more information about the tree work.</p>
+</div>
+
+<div class="next-card">
+<div class="next-number">4</div>
+<h3>Estimate</h3>
+<p>A site visit or estimate will be scheduled based on the work needed.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="emergency">
+<div class="container emergency-grid">
+
+<div>
+<h2 class="section-title">Need Emergency Tree Help?</h2>
+
+<p>
+Do not wait on a form response if the tree is creating an immediate hazard. Call A&O Tree Service for fallen trees, dangerous limbs, storm cleanup, blocked driveways, and urgent property risks.
+</p>
+
+<a href="tel:3343323873" class="btn btn-secondary">Call Now</a>
+</div>
+
+<div class="emergency-box">
+<h3>Call right away for:</h3>
+
+<ul>
+<li>Fallen trees</li>
+<li>Storm damage</li>
+<li>Blocked driveways</li>
+<li>Large broken limbs</li>
+<li>Dead or dangerous trees near a home</li>
+<li>Trees near structures or access points</li>
+</ul>
+</div>
+
+</div>
+</section>
+
+<section class="links-section">
+<div class="container">
+
+<h2 class="section-title">Helpful Links</h2>
+
+<p class="section-lead">
+While you wait, you can learn more about A&O Tree Service, view recent work, or read customer reviews.
+</p>
+
+<div class="link-grid">
+
+<div class="link-card">
+<h3>Services</h3>
+<p>See all tree removal, storm cleanup, land clearing, stump grinding, and emergency services.</p>
+<a href="services.html" class="btn btn-primary">View Services</a>
+</div>
+
+<div class="link-card">
+<h3>Gallery</h3>
+<p>View recent A&O Tree Service projects and equipment in action.</p>
+<a href="gallery.html" class="btn btn-primary">View Gallery</a>
+</div>
+
+<div class="link-card">
+<h3>Customer Reviews</h3>
+<p>Read what customers say about A&O Tree Service.</p>
+<a href="testimonials.html" class="btn btn-primary">Read Reviews</a>
+</div>
+
+<div class="link-card">
+<h3>Google Reviews</h3>
+<p>View A&O Tree Service’s Google review profile.</p>
+<a href="https://g.page/r/CQDHC12B4XqOEBM" class="btn btn-primary" target="_blank" rel="noopener">Google Reviews</a>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<footer>
+<div class="container">
+
+<img src="logo-oval.png" alt="A&O Tree Service">
+
+<h3>A&O Tree Service LLC</h3>
+
+<p>Specializing in dead and dangerous trees</p>
+
+<p>
+3960 Tallapoosa Street<br>
+Notasulga, AL 36866
+</p>
+
+<p>
+334-332-3873 • info@aotrees.com
+</p>
+
+<p>
+Licensed & Insured • Locally Owned • Free Estimates • Emergency Services Available
+</p>
+
+<p>aotrees.com</p>
+
+</div>
+</footer>
+
+</body>
+</html>
