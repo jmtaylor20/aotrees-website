@@ -445,13 +445,17 @@ Need tree removal, storm cleanup, land clearing, stump grinding, or help with a 
 Fill out the form below and A&O Tree Service will follow up as soon as possible.
 </p>
 
-<form name="contact" method="POST" action="/thank-you/" data-netlify="true" netlify-honeypot="bot-field">
+<form name="contact" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" class="netlify-contact-form">
 <input type="hidden" name="form-name" value="contact">
 
 <p hidden>
 <input name="bot-field">
 </p>
 
+  <p style="display:none;">
+<label>Don’t fill this out if you’re human: <input name="bot-field"></label>
+</p>
+  
 <input type="text" name="name" placeholder="Name" required>
 
 <input type="tel" name="phone" placeholder="Phone" required>
@@ -686,5 +690,54 @@ Licensed & Insured • Locally Owned • Free Estimates
 </div>
 </footer>
 
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+  var forms = document.querySelectorAll(".netlify-contact-form");
+
+  forms.forEach(function (form) {
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      var submitButton = form.querySelector('button[type="submit"], input[type="submit"]');
+      var originalButtonText = submitButton ? submitButton.textContent : "";
+
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.textContent = "Submitting...";
+      }
+
+      var formData = new FormData(form);
+
+      formData.set("form-name", "contact");
+
+      var encodedData = new URLSearchParams(formData).toString();
+
+      fetch("/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        body: encodedData
+      })
+      .then(function (response) {
+        if (!response.ok) {
+          throw new Error("Form submission failed");
+        }
+
+        window.location.href = "/thank-you/";
+      })
+      .catch(function () {
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.textContent = originalButtonText;
+        }
+
+        alert("Something went wrong with the form. Please call or text A&O Tree Service at 334-332-3873.");
+      });
+    });
+  });
+});
+</script>
+  
 </body>
 </html>
