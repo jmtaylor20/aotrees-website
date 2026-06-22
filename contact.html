@@ -546,14 +546,21 @@ Need tree removal, storm cleanup, land clearing, stump grinding, or help with a 
 <h2>Request a Free Estimate</h2>
 
 <p>
-Fill out the form below and A&O Tree Service will follow up as soon as possible.
-</p>
+<form
+  name="contact"
+  method="POST"
+  action="/thank-you/"
+  data-netlify="true"
+  netlify-honeypot="bot-field"
+>
 
-<form name="contact" method="POST" action="/thank-you/" data-netlify="true" netlify-honeypot="bot-field">
 <input type="hidden" name="form-name" value="contact">
 
 <p hidden>
-<input name="bot-field">
+  <label>
+    Don't fill this out if you're human:
+    <input name="bot-field">
+  </label>
 </p>
 
   <p style="display:none;">
