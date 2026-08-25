@@ -49,6 +49,6 @@
   mobileCall.className = "mobile-call";
   mobileCall.setAttribute("aria-label", "Quick contact");
   mobileCall.innerHTML =
-    '<a href="tel:3343323873">Call 334-332-3873</a><a href="contact.html#contact-form">Free Estimate</a>';
+    '<a href="tel:3343323873">Call 334-332-3873</a><a href="/contact.html#contact-form">Free Estimate</a>';
   document.body.appendChild(mobileCall);
 })();
