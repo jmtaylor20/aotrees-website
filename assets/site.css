@@ -26,6 +26,28 @@
   box-sizing: border-box;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+footer {
+  padding: 70px 0;
+  background: var(--ao-forest-deep);
+  color: var(--ao-white);
+  text-align: center;
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 110px;
@@ -1429,6 +1451,316 @@ footer p {
 
   footer[style] {
     padding-bottom: 60px !important;
+  }
+}
+
+/* ---- layout primitives (previously only in page-level <style> blocks) --- */
+header {
+  position: sticky;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.pills,
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-links {
+  justify-content: center;
+  margin-inline: auto;
+}
+
+.related-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* ---- seasonal / dated callout ------------------------------------------ */
+.season-section {
+  position: relative;
+  background: var(--ao-forest-deep);
+  color: var(--ao-white);
+  overflow: hidden;
+}
+
+.season-section::after {
+  position: absolute;
+  top: -180px;
+  right: -140px;
+  width: 520px;
+  height: 520px;
+  border: 1px solid rgba(149, 184, 31, 0.16);
+  border-radius: 50%;
+  box-shadow: 0 0 0 80px rgba(149, 184, 31, 0.04);
+  content: "";
+  pointer-events: none;
+}
+
+.season-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.season-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  border: 1px solid rgba(149, 184, 31, 0.45);
+  border-radius: 999px;
+  margin-bottom: 20px;
+  padding: 8px 16px;
+  background: rgba(149, 184, 31, 0.12);
+  color: var(--ao-lime-bright);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.season-badge::before {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--ao-lime);
+  box-shadow: 0 0 0 4px rgba(149, 184, 31, 0.22);
+  content: "";
+}
+
+.season-section .section-title {
+  color: var(--ao-white);
+}
+
+.season-lead {
+  max-width: 780px;
+  margin-bottom: 40px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 19px;
+  line-height: 1.6;
+}
+
+.season-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.season-card {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--ao-radius-sm);
+  padding: 26px 24px;
+  background: rgba(255, 255, 255, 0.055);
+  transition: background 200ms ease, transform 200ms ease;
+}
+
+.season-card:hover {
+  background: rgba(255, 255, 255, 0.09);
+  transform: translateY(-3px);
+}
+
+.season-card h3 {
+  margin-bottom: 10px;
+  color: var(--ao-lime-bright);
+  font-size: 19px;
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+.season-card p {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 15px;
+  line-height: 1.62;
+}
+
+.season-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 36px;
+}
+
+@media (max-width: 980px) {
+  .season-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .season-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .season-lead {
+    font-size: 17px;
+  }
+
+  .season-actions .btn {
+    width: 100%;
+  }
+}
+
+/* ---- FAQ accordions ---------------------------------------------------- */
+.faq-section {
+  background: var(--ao-paper);
+}
+
+.faq-nav {
+  margin-bottom: 44px;
+}
+
+.faq-jump {
+  border-color: var(--ao-line);
+  background: var(--ao-white);
+  color: var(--ao-forest);
+  box-shadow: var(--ao-shadow-sm);
+  transition: background 180ms ease, color 180ms ease;
+}
+
+.faq-jump:hover {
+  background: var(--ao-forest);
+  color: var(--ao-white);
+}
+
+.faq-group + .faq-group {
+  margin-top: 54px;
+}
+
+.faq-group-title {
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--ao-lime);
+  padding-bottom: 12px;
+  color: var(--ao-forest);
+  font-size: clamp(26px, 3vw, 34px);
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+}
+
+.faq-item {
+  border: 1px solid var(--ao-line);
+  border-radius: var(--ao-radius-sm);
+  margin-bottom: 12px;
+  background: var(--ao-white);
+  box-shadow: var(--ao-shadow-sm);
+  overflow: hidden;
+}
+
+.faq-item[open] {
+  border-color: rgba(149, 184, 31, 0.55);
+}
+
+.faq-item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 20px 24px;
+  color: var(--ao-forest-deep);
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1.35;
+  list-style: none;
+  transition: color 180ms ease;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary:hover {
+  color: var(--ao-forest);
+}
+
+/* chevron drawn from borders so there is no icon font to load */
+.faq-item summary::after {
+  width: 10px;
+  height: 10px;
+  flex: 0 0 auto;
+  border-right: 2.5px solid var(--ao-lime);
+  border-bottom: 2.5px solid var(--ao-lime);
+  margin-right: 4px;
+  content: "";
+  transform: translateY(-3px) rotate(45deg);
+  transition: transform 220ms ease;
+}
+
+.faq-item[open] summary::after {
+  transform: translateY(2px) rotate(-135deg);
+}
+
+.faq-answer {
+  border-top: 1px solid var(--ao-line);
+  padding: 20px 24px 24px;
+  color: var(--ao-muted);
+}
+
+.faq-answer p {
+  max-width: 74ch;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.faq-answer p + p {
+  margin-top: 14px;
+}
+
+.faq-cta {
+  margin-top: 56px;
+  border: 1px solid var(--ao-line);
+  border-radius: var(--ao-radius);
+  padding: 44px 32px;
+  background: var(--ao-cream);
+  text-align: center;
+}
+
+.faq-cta h2 {
+  margin-bottom: 12px;
+  color: var(--ao-forest);
+  font-size: clamp(28px, 3.4vw, 38px);
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+.faq-cta p {
+  max-width: 620px;
+  margin: 0 auto 24px;
+  color: var(--ao-muted);
+}
+
+.faq-cta .btn {
+  margin: 5px;
+}
+
+@media (max-width: 700px) {
+  .faq-item summary {
+    padding: 17px 18px;
+    font-size: 16px;
+  }
+
+  .faq-answer {
+    padding: 17px 18px 20px;
+  }
+
+  .faq-cta {
+    padding: 32px 20px;
+  }
+
+  .faq-cta .btn {
+    display: flex;
+    width: 100%;
+    margin: 8px 0 0;
   }
 }
 

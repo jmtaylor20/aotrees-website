@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Confirmation pages - useful to visitors, not to search results
+Disallow: /thank-you.html
+Disallow: /thank-you/
+
+Sitemap: https://aotrees.com/sitemap.xml
