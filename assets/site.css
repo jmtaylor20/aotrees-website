@@ -598,7 +598,18 @@ section {
 }
 
 .review-slide strong {
+  display: block;
   color: var(--ao-lime-bright);
+}
+
+.review-slide small {
+  display: block;
+  margin-top: 3px;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 .stars {

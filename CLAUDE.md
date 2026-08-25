@@ -33,6 +33,35 @@ No build step: plain HTML at the repo root, deployed on Netlify.
   Google rating on your own site is self-serving review markup and violates
   Google's structured-data policy.
 - Don't publish the license number or state permit rules — Josh's call.
+
+## Google reviews
+
+The rating, review count, and review quotes are hardcoded in the HTML on
+purpose — crawlers need them in the markup, not injected by JavaScript. They
+come from the A&O Google Business Profile and must be refreshed by hand.
+
+Source of truth: Windsor.ai `google_my_business` connector, location
+`locations/10741154088808454428` ("A&O Tree Service LLC").
+
+- `review_average_rating_total` and `review_total_count` give the current
+  rating and count.
+- `review_reviewer`, `review_star_rating`, `review_comment`,
+  `review_create_time` give the reviews themselves.
+
+Last refreshed 2026-08-25: **4.9 stars, 59 reviews**. The figures appear on
+`index.html` (ticker header and score box), `testimonials.html` (hero rating
+box), and `faq.html` — plus the meta description and JSON-LD `description`
+on several pages. Grep for the old numbers to catch them all.
+
+Google CTAs use the Business Profile's own canonical URLs, keyed to place ID
+`ChIJ24XO415cjIgRAMcLXYHheo4` — not the old `g.page` short links:
+
+- Read reviews: `https://search.google.com/local/reviews?placeid=...`
+- Write a review: `https://search.google.com/local/writereview?placeid=...`
+  (this exact URL is what the profile returns as `location_metadata_new_review_uri`)
+
+Review quotes are verbatim, trimmed only with ellipses, dated with an
+absolute month and year rather than "2 months ago" so they age gracefully.
 - Images are compressed before commit (photos ≤1500px, progressive JPEG
   q76). Don't commit multi-megabyte originals.
 - The homepage "Storm Season Readiness" section is dated on purpose. Refresh
