@@ -1074,13 +1074,6 @@ section {
   background: var(--ao-forest-deep);
 }
 
-.map-placeholder,
-.map-box {
-  border: 1px solid var(--ao-line);
-  border-radius: var(--ao-radius-lg);
-  background: var(--ao-mist);
-}
-
 .alert-strip {
   font-size: clamp(17px, 2vw, 22px);
   letter-spacing: -0.015em;

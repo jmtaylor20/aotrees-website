@@ -33,6 +33,10 @@ No build step: plain HTML at the repo root, deployed on Netlify.
   Google rating on your own site is self-serving review markup and violates
   Google's structured-data policy.
 - Don't publish the license number or state permit rules — Josh's call.
+- A&O is a **service-area business**, not a storefront. The Notasulga address
+  is a staging yard and customers do not go there. Don't add a "visit us"
+  section, a map embed, or directions/hours copy that invites people to the
+  address.
 - James Gates is the owner and leads the About page. Cole Harper is who
   customers actually deal with, so he is named on `about.html` and
   `contact.html` — described by what he does (estimates, pricing, leading the
