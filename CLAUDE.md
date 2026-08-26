@@ -33,6 +33,11 @@ No build step: plain HTML at the repo root, deployed on Netlify.
   Google rating on your own site is self-serving review markup and violates
   Google's structured-data policy.
 - Don't publish the license number or state permit rules — Josh's call.
+- James Gates is the owner and leads the About page. Cole Harper is who
+  customers actually deal with, so he is named on `about.html` and
+  `contact.html` — described by what he does (estimates, pricing, leading the
+  crew) with **no job title**, deliberately. Don't assign him one, don't add
+  him to the JSON-LD, and don't promote him above James without asking.
 
 ## Google reviews
 
