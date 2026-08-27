@@ -99,7 +99,9 @@
     const toLead = (d) => {
       const svcRaw = (d["service-needed"] || "").trim();
       const svc = SERVICE_MAP[svcRaw];
-      const loc = (d["service-location"] || "").trim();
+      // The homepage form names this field "location"; contact.html uses
+      // "service-location". Accept either so both forms map the same way.
+      const loc = (d["service-location"] || d["location"] || "").trim();
       const detail = (d.details || "").trim();
       const pref = (d["preferred-contact"] || "").trim();
       const notes = [];
