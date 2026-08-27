@@ -811,7 +811,7 @@ font-size:14px !important;
 <small>Call or Text Anytime</small>
 </div>
 
-<a href="contact.html#contact-form" class="btn btn-primary">Request a Free Estimate</a>
+<a href="#estimate" class="btn btn-primary">Request a Free Estimate</a>
 </div>
 
 </div>
@@ -828,7 +828,7 @@ When storms, high winds, or fallen trees create an urgent problem, A&O Tree Serv
 
 <div class="hero-buttons">
 <a href="tel:3343323873" class="btn btn-secondary">Call 334-332-3873</a>
-<a href="contact.html#contact-form" class="btn btn-primary">Request Help</a>
+<a href="#estimate" class="btn btn-primary">Request Help</a>
 </div>
 
 </div>
@@ -856,7 +856,7 @@ A&O Tree Service responds to urgent tree service needs across East Central Alaba
 If a tree is on a structure, near a power line, blocking a driveway, or leaning after a storm, call for help and avoid trying to handle the situation yourself.
 </p>
 
-<a href="contact.html#contact-form" class="btn btn-primary">Request Emergency Help</a>
+<a href="#estimate" class="btn btn-primary">Request Emergency Help</a>
 </div>
 
 <img class="split-img" src="assets/ChainSawStorm.jpg" alt="Emergency storm cleanup tree service">
@@ -1068,8 +1068,45 @@ Call A&O Tree Service or request help online. Emergency tree service is availabl
 </p>
 
 <a href="tel:3343323873" class="btn btn-secondary">Call 334-332-3873</a>
-<a href="contact.html#contact-form" class="btn btn-primary">Request Help</a>
-
+<div class="form-card" id="estimate">
+<h2>Request a Free Estimate</h2>
+<p>Tell us what you need. We’ll follow up as soon as possible.</p>
+<!-- AO-ESTIMATE-FORM · keep identical across pages (home, contact, service pages) -->
+<form name="contact" method="POST" action="/thank-you/" data-netlify="true" netlify-honeypot="bot-field">
+<input type="hidden" name="form-name" value="contact">
+<p hidden>
+  <label>
+    Don't fill this out if you're human:
+    <input name="bot-field">
+  </label>
+</p>
+<input type="text" name="name" placeholder="Name" required>
+<input type="tel" name="phone" placeholder="Phone" required>
+<input type="email" name="email" placeholder="Email">
+<select name="preferred-contact">
+<option value="">Preferred method of contact</option>
+<option>Call</option>
+<option>Text</option>
+<option>Email</option>
+</select>
+<input type="text" name="service-location" placeholder="Property / service location">
+<select name="service-needed">
+<option value="">What do you need help with?</option>
+<option>Tree Removal</option>
+<option>Dead or Dangerous Tree</option>
+<option>Storm Cleanup</option>
+<option selected>Emergency Tree Service</option>
+<option>Limb Removal / Pruning</option>
+<option>Stump Grinding</option>
+<option>Land Clearing / Brush Removal</option>
+<option>Cleanup &amp; Hauling</option>
+<option>Other</option>
+</select>
+<textarea name="details" placeholder="Tell us about the tree work you need"></textarea>
+<button class="submit-btn" type="submit">Submit Request</button>
+</form>
+<!-- /AO-ESTIMATE-FORM -->
+</div>
 </div>
 </section>
 
