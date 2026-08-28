@@ -52,6 +52,20 @@
     '<a href="tel:3343323873">Call 334-332-3873</a><a href="/contact.html#contact-form">Free Estimate</a>';
   document.body.appendChild(mobileCall);
 
+  // Ensure Privacy Policy + Terms links are in the footer on every page.
+  const footerLinks = document.querySelector("footer .footer-links");
+  if (footerLinks) {
+    [["privacy.html", "Privacy Policy"], ["terms.html", "Terms & Conditions"]].forEach((pair) => {
+      const file = pair[0];
+      if (![...footerLinks.querySelectorAll("a")].some((a) => a.getAttribute("href") === file)) {
+        const a = document.createElement("a");
+        a.href = file;
+        a.textContent = pair[1];
+        footerLinks.appendChild(a);
+      }
+    });
+  }
+
   // ---- Lead forwarding -----------------------------------------------------
   // Send the contact form straight into the A&O field app (Supabase) so a clean,
   // structured lead lands in "Estimates" the instant someone submits — instead of
