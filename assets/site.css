@@ -1782,3 +1782,9 @@ header {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* SMS/consent opt-in shown under every estimate form (A2P 10DLC compliance). */
+.sms-consent{display:flex;align-items:flex-start;gap:.55rem;margin:.15rem 0 .95rem;font-size:.78rem;line-height:1.45;color:#5a665f;text-align:left;}
+.sms-consent input[type="checkbox"]{margin-top:.15rem;width:16px;height:16px;flex:0 0 auto;accent-color:#1e5631;cursor:pointer;}
+.sms-consent span{flex:1;}
+.sms-consent a{color:#1e5631;text-decoration:underline;}
