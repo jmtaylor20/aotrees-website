@@ -928,17 +928,23 @@ Request a free estimate from A&O Tree Service. Licensed, insured, locally owned,
     <input name="bot-field">
   </label>
 </p>
-<input type="text" name="name" placeholder="Name" required>
-<input type="tel" name="phone" placeholder="Phone" required>
-<input type="email" name="email" placeholder="Email">
-<select name="preferred-contact">
+<label class="sr-only" for="f-name">Your name</label>
+<input type="text" name="name" placeholder="Name" required id="f-name" autocomplete="name">
+<label class="sr-only" for="f-phone">Phone number</label>
+<input type="tel" name="phone" placeholder="Phone" required id="f-phone" autocomplete="tel" inputmode="tel">
+<label class="sr-only" for="f-email">Email address</label>
+<input type="email" name="email" placeholder="Email" id="f-email" autocomplete="email" inputmode="email">
+<label class="sr-only" for="f-contact">Preferred method of contact</label>
+<select name="preferred-contact" id="f-contact">
 <option value="">Preferred method of contact</option>
 <option>Call</option>
 <option>Text</option>
 <option>Email</option>
 </select>
-<input type="text" name="service-location" placeholder="Property / service location">
-<select name="service-needed">
+<label class="sr-only" for="f-location">Property or service location</label>
+<input type="text" name="service-location" placeholder="Property / service location" id="f-location" autocomplete="street-address">
+<label class="sr-only" for="f-service">What do you need help with</label>
+<select name="service-needed" id="f-service">
 <option value="">What do you need help with?</option>
 <option>Tree Removal</option>
 <option>Dead or Dangerous Tree</option>
@@ -950,7 +956,8 @@ Request a free estimate from A&O Tree Service. Licensed, insured, locally owned,
 <option>Cleanup &amp; Hauling</option>
 <option>Other</option>
 </select>
-<textarea name="details" placeholder="Tell us about the tree work you need"></textarea>
+<label class="sr-only" for="f-details">Tell us about the tree work you need</label>
+<textarea name="details" placeholder="Tell us about the tree work you need" id="f-details"></textarea>
 <label class="sms-consent"><input type="checkbox" name="sms-consent" value="yes"><span>Optional: check this box to receive text message updates from A&amp;O Tree Service about your request. Consent is not required to submit this form or to receive service. Message frequency varies; msg &amp; data rates may apply. Reply STOP to opt out, HELP for help. See our <a href="privacy.html">Privacy Policy</a> &amp; <a href="terms.html">Terms</a>.</span></label>
 <button class="submit-btn" type="submit">Submit Request</button>
 </form>

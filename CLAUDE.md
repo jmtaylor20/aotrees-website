@@ -58,6 +58,23 @@ No build step: plain HTML at the repo root, deployed on Netlify.
   town list, which wastes the snippet and gives Google nothing to tell the
   pages apart.
 
+## Estimate form
+
+Every page that carries the estimate form uses the same field set, and the
+Netlify form is keyed on those `name` attributes. Do not rename them.
+
+- Each field has a real `<label for="...">` carrying `class="sr-only"`, which
+  hides it visually while leaving it in the accessibility tree. Placeholders
+  stay for sighted users, but a placeholder is not a label: it disappears the
+  moment someone types, and assistive tech cannot rely on it. If you add a
+  field, add its label too.
+- Fields carry `autocomplete` (`name`, `tel`, `email`, `street-address`) and
+  `inputmode` so phones can autofill. This matters more than it looks on a
+  form filled mostly on phones.
+- `name` and `phone` are the only required fields. Keep it that way: the
+  address and service type are optional on purpose, and making them required
+  would cost leads.
+
 ## Mobile density
 
 `assets/site.css` ends with a `max-width: 620px` block labelled "mobile
