@@ -98,6 +98,18 @@ Review quotes are verbatim, trimmed only with ellipses, dated with an
 absolute month and year rather than "2 months ago" so they age gracefully.
 - Images are compressed before commit (photos ≤1500px, progressive JPEG
   q76). Don't commit multi-megabyte originals.
+- Every photo ships at three widths: `name-400w.jpeg`, `name-800w.jpeg`, and
+  the 1500px original, wired up with `srcset` and a `sizes` hint. When you add
+  a photo, generate the variants and the srcset too, or a phone downloads a
+  1500px file to fill a 118px thumbnail.
+- `sizes` must describe the slot the image actually fills. The first image in
+  a gallery or photo grid spans full width on mobile, so it gets `92vw` while
+  the rest get `50vw`. Get this wrong and the browser picks a file too small,
+  and the image renders soft.
+- `loading="lazy"` belongs in the markup, never assigned from JavaScript.
+  site.js used to set it on load and it did nothing: the parser has already
+  started fetching by then, so all 11 homepage images loaded up front at
+  7.6MB. First load is now 0.93MB on mobile.
 - The homepage "Storm Season Readiness" section is dated on purpose. Refresh
   the copy and badge when the season turns.
 
