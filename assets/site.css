@@ -1909,10 +1909,7 @@ header {
   }
 }
 
-/* Visually hidden but available to screen readers. Used for the estimate form
-   labels: the fields carry placeholders for sighted users, but a placeholder
-   is not a label. It disappears the moment someone types and assistive tech
-   cannot rely on it, so every field gets a real <label> tied to it by id. */
+/* Visually hidden but available to screen readers. Kept as a utility. */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -1924,6 +1921,54 @@ header {
   clip-path: inset(50%);
   overflow: hidden;
   white-space: nowrap;
+}
+
+/* ---- estimate form fields ----------------------------------------------
+   Every control gets a visible label above it. A placeholder is not a label:
+   it disappears the moment someone types, which is exactly when a customer
+   filling this on a phone in their yard needs to know which box is which.
+   Placeholders stay, but as hints and examples rather than the field name. */
+.field {
+  display: grid;
+  gap: 5px;
+}
+
+.field > label {
+  color: var(--ao-forest);
+  font-size: 11.5px;
+  font-weight: 900;
+  letter-spacing: 0.07em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.field > label .req {
+  margin-left: 2px;
+  color: var(--ao-green);
+}
+
+.field > label .opt {
+  margin-left: 5px;
+  color: var(--ao-muted);
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: none;
+}
+
+/* the grid gap now sits between field groups, so tighten it slightly */
+.form-card form {
+  gap: 15px;
+}
+
+@media (max-width: 620px) {
+  .field > label {
+    font-size: 11px;
+  }
+
+  .form-card form {
+    gap: 13px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

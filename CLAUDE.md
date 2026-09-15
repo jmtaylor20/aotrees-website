@@ -63,11 +63,17 @@ No build step: plain HTML at the repo root, deployed on Netlify.
 Every page that carries the estimate form uses the same field set, and the
 Netlify form is keyed on those `name` attributes. Do not rename them.
 
-- Each field has a real `<label for="...">` carrying `class="sr-only"`, which
-  hides it visually while leaving it in the accessibility tree. Placeholders
-  stay for sighted users, but a placeholder is not a label: it disappears the
-  moment someone types, and assistive tech cannot rely on it. If you add a
-  field, add its label too.
+- Each field sits in a `<div class="field">` with a **visible** `<label>`
+  above it. A placeholder is not a label: it disappears the moment someone
+  types, which is exactly when a customer filling this on a phone in their
+  yard needs to know which box is which. If you add a field, wrap it the same
+  way.
+- Placeholders are hints and examples, never a repeat of the label. "Street
+  address, or the nearest crossroads" and "Where we can send your estimate"
+  earn their place; "Name" under a label reading Name does not.
+- Required fields are marked with a `<span class="req" aria-hidden="true">*`.
+  Screen readers get this from the `required` attribute instead, so the
+  asterisk is decorative on purpose.
 - Fields carry `autocomplete` (`name`, `tel`, `email`, `street-address`) and
   `inputmode` so phones can autofill. This matters more than it looks on a
   form filled mostly on phones.

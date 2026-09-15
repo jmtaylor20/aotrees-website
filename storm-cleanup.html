@@ -1091,24 +1091,35 @@ Request a free estimate from A&O Tree Service or call today for storm cleanup, f
     <input name="bot-field">
   </label>
 </p>
-<label class="sr-only" for="f-name">Your name</label>
-<input type="text" name="name" placeholder="Name" required id="f-name" autocomplete="name">
-<label class="sr-only" for="f-phone">Phone number</label>
-<input type="tel" name="phone" placeholder="Phone" required id="f-phone" autocomplete="tel" inputmode="tel">
-<label class="sr-only" for="f-email">Email address</label>
-<input type="email" name="email" placeholder="Email" id="f-email" autocomplete="email" inputmode="email">
-<label class="sr-only" for="f-contact">Preferred method of contact</label>
+<div class="field">
+<label for="f-name">Name <span class="req" aria-hidden="true">*</span></label>
+<input type="text" name="name" placeholder="First and last name" required id="f-name" autocomplete="name">
+</div>
+<div class="field">
+<label for="f-phone">Phone <span class="req" aria-hidden="true">*</span></label>
+<input type="tel" name="phone" placeholder="Best number to reach you" required id="f-phone" autocomplete="tel" inputmode="tel">
+</div>
+<div class="field">
+<label for="f-email">Email <span class="opt">optional</span></label>
+<input type="email" name="email" placeholder="Where we can send your estimate" id="f-email" autocomplete="email" inputmode="email">
+</div>
+<div class="field">
+<label for="f-contact">Preferred contact method</label>
 <select name="preferred-contact" id="f-contact">
-<option value="">Preferred method of contact</option>
+<option value="">Choose one</option>
 <option>Call</option>
 <option>Text</option>
 <option>Email</option>
 </select>
-<label class="sr-only" for="f-location">Property or service location</label>
-<input type="text" name="service-location" placeholder="Property / service location" id="f-location" autocomplete="street-address">
-<label class="sr-only" for="f-service">What do you need help with</label>
+</div>
+<div class="field">
+<label for="f-location">Property or service location</label>
+<input type="text" name="service-location" placeholder="Street address, or the nearest crossroads" id="f-location" autocomplete="street-address">
+</div>
+<div class="field">
+<label for="f-service">What do you need help with?</label>
 <select name="service-needed" id="f-service">
-<option value="">What do you need help with?</option>
+<option value="">Choose a service</option>
 <option>Tree Removal</option>
 <option>Dead or Dangerous Tree</option>
 <option selected>Storm Cleanup</option>
@@ -1119,8 +1130,11 @@ Request a free estimate from A&O Tree Service or call today for storm cleanup, f
 <option>Cleanup &amp; Hauling</option>
 <option>Other</option>
 </select>
-<label class="sr-only" for="f-details">Tell us about the tree work you need</label>
-<textarea name="details" placeholder="Tell us about the tree work you need" id="f-details"></textarea>
+</div>
+<div class="field">
+<label for="f-details">Tell us about the tree work you need</label>
+<textarea name="details" id="f-details"></textarea>
+</div>
 <label class="sms-consent"><input type="checkbox" name="sms-consent" value="yes"><span>Optional: check this box to receive text message updates from A&amp;O Tree Service about your request. Consent is not required to submit this form or to receive service. Message frequency varies; msg &amp; data rates may apply. Reply STOP to opt out, HELP for help. See our <a href="privacy.html">Privacy Policy</a> &amp; <a href="terms.html">Terms</a>.</span></label>
 <button class="submit-btn" type="submit">Submit Request</button>
 </form>
