@@ -40,10 +40,9 @@
     if (currentFile === linkFile) link.setAttribute("aria-current", "page");
   });
 
-  document.querySelectorAll("img:not([loading])").forEach((image, index) => {
-    if (index > 1) image.loading = "lazy";
-    image.decoding = "async";
-  });
+  // Lazy loading and decoding hints live in the markup now. Setting
+  // image.loading from here never worked: the parser has already started
+  // fetching by the time this runs, so every image loaded up front.
 
   const mobileCall = document.createElement("div");
   mobileCall.className = "mobile-call";
