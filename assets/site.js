@@ -68,7 +68,7 @@
 
   // ---- Lead forwarding -----------------------------------------------------
   // Send the contact form straight into the A&O field app (Supabase) so a clean,
-  // structured lead lands in "Estimates" the instant someone submits — instead of
+  // structured lead lands in "Estimates" the instant someone submits, instead of
   // the team scraping it out of a notification email. Netlify STILL records the
   // submission and emails it as a backup, and if the app insert fails the lead is
   // never lost. Only active on the page that has the contact form.
