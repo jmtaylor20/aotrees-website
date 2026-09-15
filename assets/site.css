@@ -1909,6 +1909,23 @@ header {
   }
 }
 
+/* Visually hidden but available to screen readers. Used for the estimate form
+   labels: the fields carry placeholders for sighted users, but a placeholder
+   is not a label. It disappears the moment someone types and assistive tech
+   cannot rely on it, so every field gets a real <label> tied to it by id. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
