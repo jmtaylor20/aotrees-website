@@ -81,6 +81,27 @@ Netlify form is keyed on those `name` attributes. Do not rename them.
   address and service type are optional on purpose, and making them required
   would cost leads.
 
+## Light cards inside dark sections
+
+`assets/site.css` carries a block near the end headed "light cards inside dark
+sections". Keep it after the dark-section rules, because it wins on source
+order.
+
+Several sections style their own text light-on-dark: `.hero`, `.cta`,
+`.owner-section`, `.protection`, `.safety`, `.property`, `.cleanup`,
+`.site-prep`, `.equipment`, `.emergency`. Light cards get nested inside them,
+the estimate form inside a `.cta` block on every service page and the
+confirmation card on the photo hero, and those section rules reach in and turn
+the card's text white on white.
+
+That is exactly what happened to the thank-you page (its whole body was
+invisible) and to the estimate form's intro line on seven service pages. If
+you add a light card inside one of those sections, add its class to that
+block.
+
+Also note `.hero .btn-primary` is a translucent over-photo variant. Inside a
+light card it renders as washed-out grey, so the block resets it to solid.
+
 ## Mobile density
 
 `assets/site.css` ends with a `max-width: 620px` block labelled "mobile
