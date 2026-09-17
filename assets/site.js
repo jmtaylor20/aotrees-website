@@ -141,8 +141,12 @@
         scope_notes: notes.join("  ") || null,
         status: "lead",
         lead_source: "web",
-        // Queue the instant auto-reply when we have an email to send it to.
-        ack_email_status: (d.email || "").trim() ? "queued" : null,
+        // Auto-reply routing: the form requires a phone and the customer checks
+        // the SMS consent box, so text them (higher open rate, matches the A2P
+        // opt-in we registered). Fall back to email only when there is no phone,
+        // so nobody gets both.
+        ack_sms_status: (d.phone || "").trim() ? "queued" : null,
+        ack_email_status: (!(d.phone || "").trim() && (d.email || "").trim()) ? "queued" : null,
         received_at: new Date().toISOString(),
       };
     };
