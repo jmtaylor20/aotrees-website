@@ -1,0 +1,8 @@
+# Security headers for every page. Netlify reads this file from the publish
+# directory. No Content-Security-Policy yet: the pages load Google Analytics
+# and embed Google Maps, so a CSP needs its own testing pass first.
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
