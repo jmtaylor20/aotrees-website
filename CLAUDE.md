@@ -23,6 +23,10 @@ No build step: plain HTML at the repo root, deployed on Netlify.
 
 ## Conventions
 
+- Every absolute URL (canonical, og:url, og:image, JSON-LD, sitemap) uses
+  `https://www.aotrees.com/` with no `.html`, because www is the primary
+  domain on Netlify and Pretty URLs serve pages without the extension.
+  The bare domain and `.html` addresses only redirect.
 - Pages carry a canonical URL, Open Graph tags, and a JSON-LD `@graph`
   (WebPage + WebSite + HomeAndConstructionBusiness, plus Service and
   BreadcrumbList on service pages). Add these to any new page and list it in

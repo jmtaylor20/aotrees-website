@@ -5,4 +5,4 @@ Allow: /
 Disallow: /thank-you.html
 Disallow: /thank-you/
 
-Sitemap: https://aotrees.com/sitemap.xml
+Sitemap: https://www.aotrees.com/sitemap.xml
